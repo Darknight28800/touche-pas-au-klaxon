@@ -3,7 +3,7 @@
         'name' => 'darknight/touche-pas-au-klaxon',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '76f69ffa63e18bd5774497a64597f2ae4ba789a0',
+        'reference' => '904a022ff478bad4ae849be2566ef0914db7d133',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'darknight/touche-pas-au-klaxon' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '76f69ffa63e18bd5774497a64597f2ae4ba789a0',
+            'reference' => '904a022ff478bad4ae849be2566ef0914db7d133',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -108,6 +108,15 @@
             'install_path' => __DIR__ . '/../phpoffice/phpspreadsheet',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'phpstan/phpstan' => array(
+            'pretty_version' => '2.2.1',
+            'version' => '2.2.1.0',
+            'reference' => 'dea9c8f2d25cc849391042b71e429c1a4bf82660',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpstan/phpstan',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'phpunit/php-code-coverage' => array(
             'pretty_version' => '11.0.12',
