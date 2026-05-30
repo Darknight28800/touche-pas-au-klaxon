@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\AgencyModel;
 use App\Models\TripModel;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class AdminController
 {

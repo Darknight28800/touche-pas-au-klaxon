@@ -1,5 +1,11 @@
 <?php require_once __DIR__ . '/../partials/header.php'; ?>
 
+<?php
+/** @var array $trip */
+/** @var array $agencies */
+?>
+
+
 <div class="container" style="max-width: 750px;">
 
     <div class="saas-card fade-in mb-4">

@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<?php
+/** @var int $totalAll */
+/** @var int $totalFiltered */
+/** @var array $agencies */
+/** @var array $users */
+/** @var array $trips */
+/** @var array $filters */
+?>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">

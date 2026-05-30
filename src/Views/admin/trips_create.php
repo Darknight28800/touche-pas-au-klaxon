@@ -1,5 +1,10 @@
 <?php require_once __DIR__ . '/../partials/header.php'; ?>
 
+<?php
+/** @var array $agencies */
+?>
+
+
 <div class="container mt-4">
 
     <h1 class="fw-bold mb-4" style="color:#111827;">Créer un trajet</h1>

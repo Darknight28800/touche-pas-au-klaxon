@@ -9,6 +9,13 @@ require_once __DIR__ . '/../partials/header.php';
 
 ?>
 
+<?php
+/** @var array $trip */
+/** @var array $agencies */
+/** @var array $users */
+?>
+
+
 <div class="container mt-4">
 
     <h1 class="mb-4">Modifier le trajet</h1>

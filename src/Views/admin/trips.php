@@ -7,6 +7,14 @@ $breadcrumb = [
 require_once __DIR__ . '/_partials/header_admin.php';
 ?>
 
+<?php
+/** @var array $agencies */
+/** @var array $users */
+/** @var int $totalPages */
+/** @var int $page */
+?>
+
+
 <div class="container py-5">
 
     <h1 class="fw-bold mb-4" style="color:#111827;">Trajets</h1>

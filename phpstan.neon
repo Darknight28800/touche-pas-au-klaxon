@@ -1,0 +1,7 @@
+parameters:
+    level: 1
+    paths:
+        - src/Controllers
+        - src/Models
+        - src
+    tmpDir: phpstan/tmp

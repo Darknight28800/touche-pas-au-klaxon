@@ -1,5 +1,11 @@
 <?php require_once __DIR__ . '/_partials/header_admin.php'; ?>
 
+<?php
+/** @var array $stats */
+/** @var array $latestTrips */
+?>
+
+
 <div class="container py-4">
 
     <h1 class="mb-4 fw-bold">Tableau de bord</h1>

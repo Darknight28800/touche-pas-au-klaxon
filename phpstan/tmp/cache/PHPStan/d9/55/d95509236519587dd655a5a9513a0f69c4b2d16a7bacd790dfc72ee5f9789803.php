@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
     array (
-      0 => '102fccd6ef0d56a0ccda3bc5202087810b10fa50142e4121a5f6855022da3492',
+      0 => '1f9dbd41ec5bc8bb1df27efaf4b4c351504de559af92a445c46355b5aa8b5a46',
       1 => 
       array (
         0 => 'app\\controllers\\admincontroller',
@@ -272,7 +272,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\dashboard.php' => 
     array (
-      0 => 'fbfa8057c7d522c6179cc0648f2e7f20323f583d83d0cea926d1c029637ce024',
+      0 => '5fb1b48ffc38b281c0326ce11f0e68c22c0fce943a46dc63b1d34d55f1b4fd91',
       1 => 
       array (
       ),

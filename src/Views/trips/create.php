@@ -1,5 +1,10 @@
 <?php require_once __DIR__ . '/../partials/header.php'; ?>
 
+<?php
+/** @var array $agencies */
+?>
+
+
 <div class="container mt-5" style="max-width: 700px;">
 
     <h2 class="text-center mb-4">Proposer un trajet</h2>
