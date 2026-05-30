@@ -1,5 +1,24 @@
-/vendor
-/node_modules
-.env
-/visuels
-TOUCHE PAS AU KLAXON.pdf
+# --- DEPENDANCES COMPOSER ---
+/vendor/
+
+# --- FICHIERS GENERES (EXPORTS) ---
+excel-styled.xlsx
+export-excel.php
+export-styled.php
+
+# --- CAPTURES / VISUELS ---
+/visuels/
+
+# --- LIVRABLES PERSONNELS ---
+*.pdf
+*.docx
+*.xlsx
+
+# --- SYSTEME / OS ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / EDITORS ---
+/.vscode/
+/.idea/
+/nbproject/
