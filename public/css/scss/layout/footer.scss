@@ -1,0 +1,24 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer-blue-social{
+background:#0074c7;
+padding:24px 0;
+}
+.footer-blue-social a{
+color:#ffffff;
+font-size:1.3rem;
+}
+.footer-blue-social a:hover{
+opacity:.8;
+}
+.footer-brand{
+font-weight:700;
+color:#ffffff;
+font-size:1.2rem;
+}
+.footer-copy{
+color:#e5e7eb;
+font-size:.9rem;
+}
+

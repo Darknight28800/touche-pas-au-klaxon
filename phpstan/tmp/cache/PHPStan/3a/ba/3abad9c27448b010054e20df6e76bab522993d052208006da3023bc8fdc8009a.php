@@ -230,7 +230,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Router\\altorouter\\AltoRouter.php' => '82f20a5ac15ad18c77631af3907ead0a809a05c6b9498389461e42c7766debfc',
+      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Router\\altorouter\\AltoRouter.php' => 'd149fa056ca85ff89af239cc3a5eb1d23b584330433172ff918d60d9bedcd767',
     ),
   ),
 ));

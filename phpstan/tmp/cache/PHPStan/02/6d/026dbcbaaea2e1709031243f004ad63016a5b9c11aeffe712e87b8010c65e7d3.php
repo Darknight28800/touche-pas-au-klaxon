@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Core\Auth.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Core\Auth
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-fa87932bc251107a1b8d9d15c6c16f73d9bb2ce9daa077fbe8dab827286eb7f1',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-fa87932bc251107a1b8d9d15c6c16f73d9bb2ce9daa077fbe8dab827286eb7f1',
    'data' => 
   array (
     'locatedSource' => 

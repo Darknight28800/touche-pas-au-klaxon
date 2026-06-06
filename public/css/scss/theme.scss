@@ -1,0 +1,29 @@
+/* ============================
+   THEME GLOBAL
+   ============================ */
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+}
+
+/* Cartes, sections, blocs */
+.bg-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Mode sombre */
+[data-theme="dark"] {
+    body {
+        background: var(--background);
+        color: var(--text);
+    }
+
+    .bg-card {
+        background: var(--bg-card);
+        box-shadow: var(--shadow);
+    }
+}

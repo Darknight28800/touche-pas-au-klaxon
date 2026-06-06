@@ -2,7 +2,7 @@
 
 // osfsl-C:/xampp/htdocs/touche-pas-au-klaxon/vendor/composer/../phpoffice/phpspreadsheet/src/PhpSpreadsheet/Style/Style.php-PHPStan\BetterReflection\Reflection\ReflectionClass-PhpOffice\PhpSpreadsheet\Style\Style
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-b8dea0401e11209be91e943662931a687c1409fd08dde58d5b881a82d3a5216d-8.2.31-6.70.0.1',
+   'variableKey' => 'v2-b8dea0401e11209be91e943662931a687c1409fd08dde58d5b881a82d3a5216d-8.2.12-6.70.0.1',
    'data' => 
   array (
     'locatedSource' => 

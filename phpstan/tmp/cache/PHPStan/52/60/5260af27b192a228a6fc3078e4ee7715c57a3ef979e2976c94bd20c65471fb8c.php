@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Controllers\TripController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Controllers\TripController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-74a2f36a47df5ef10fe0984bc22f6f59ed7f95b499b44c0676b439386c3a32dd',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-07442cfd26100c1743c71b487e3040842916a551698a914b4ef335660e89b1b2',
    'data' => 
   array (
     'locatedSource' => 
@@ -22,15 +22,26 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'isEnum' => false,
     'isBackedEnum' => false,
     'modifiers' => 0,
-    'docComment' => NULL,
+    'docComment' => '/**
+ * Class TripController
+ *
+ * Gère toutes les opérations liées aux trajets :
+ * - liste publique filtrée
+ * - affichage d\'un trajet
+ * - création
+ * - modification
+ * - suppression
+ *
+ * Les actions sensibles nécessitent une authentification.
+ */',
     'attributes' => 
     array (
     ),
-    'startLine' => 9,
-    'endLine' => 176,
+    'startLine' => 21,
+    'endLine' => 302,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => NULL,
+    'parentClassName' => 'App\\Controllers\\CoreController',
     'implementsClassNames' => 
     array (
     ),
@@ -45,9 +56,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
-      'index' => 
+      '__construct' => 
       array (
-        'name' => 'index',
+        'name' => '__construct',
         'parameters' => 
         array (
         ),
@@ -57,10 +68,54 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Page d\'accueil : liste + filtres + pagination
+ * Initialise les protections globales via CoreController.
  */',
-        'startLine' => 14,
-        'endLine' => 42,
+        'startLine' => 26,
+        'endLine' => 29,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Controllers',
+        'declaringClassName' => 'App\\Controllers\\TripController',
+        'implementingClassName' => 'App\\Controllers\\TripController',
+        'currentClassName' => 'App\\Controllers\\TripController',
+        'aliasName' => NULL,
+      ),
+      'index' => 
+      array (
+        'name' => 'index',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Affiche la liste des trajets publics filtrés.
+ *
+ * Filtres possibles :
+ * - departure (ID agence)
+ * - arrival (ID agence)
+ * - date (YYYY-MM-DD)
+ *
+ * @return void
+ */',
+        'startLine' => 41,
+        'endLine' => 60,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -83,31 +138,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 47,
-            'endLine' => 47,
+            'startLine' => 68,
+            'endLine' => 68,
             'startColumn' => 26,
-            'endColumn' => 28,
+            'endColumn' => 32,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Affichage d\'un trajet
+ * Affiche les détails d\'un trajet.
+ *
+ * @param int $id ID du trajet
+ * @return void
  */',
-        'startLine' => 47,
-        'endLine' => 55,
+        'startLine' => 68,
+        'endLine' => 82,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -128,15 +202,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Formulaire de création
+ * Affiche le formulaire de création d\'un trajet.
+ *
+ * @return void
  */',
-        'startLine' => 60,
-        'endLine' => 68,
+        'startLine' => 89,
+        'endLine' => 97,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -157,15 +241,30 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Création d\'un trajet
+ * Traite la création d\'un trajet.
+ *
+ * Effectue les contrôles :
+ * - agences différentes
+ * - dates cohérentes
+ * - nombre de places valide
+ *
+ * @return void
  */',
-        'startLine' => 73,
-        'endLine' => 120,
+        'startLine' => 109,
+        'endLine' => 154,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -188,31 +287,54 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 125,
-            'endLine' => 125,
+            'startLine' => 166,
+            'endLine' => 166,
             'startColumn' => 30,
-            'endColumn' => 32,
+            'endColumn' => 36,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Formulaire d\'édition
+ * Affiche le formulaire d\'édition d\'un trajet.
+ *
+ * Vérifie :
+ * - que le trajet existe
+ * - que l\'utilisateur est l\'auteur ou admin
+ *
+ * @param int $id ID du trajet
+ * @return void
  */',
-        'startLine' => 125,
-        'endLine' => 136,
+        'startLine' => 166,
+        'endLine' => 193,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -235,31 +357,55 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 141,
-            'endLine' => 141,
+            'startLine' => 206,
+            'endLine' => 206,
             'startColumn' => 28,
-            'endColumn' => 30,
+            'endColumn' => 34,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Mise à jour d\'un trajet
+ * Met à jour un trajet existant.
+ *
+ * Vérifie :
+ * - cohérence des agences
+ * - cohérence des dates
+ * - cohérence des places
+ *
+ * @param int $id ID du trajet
+ * @return void
  */',
-        'startLine' => 141,
-        'endLine' => 160,
+        'startLine' => 206,
+        'endLine' => 265,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -282,31 +428,54 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 165,
-            'endLine' => 165,
+            'startLine' => 277,
+            'endLine' => 277,
             'startColumn' => 28,
-            'endColumn' => 30,
+            'endColumn' => 34,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
         'docComment' => '/**
- * Suppression d\'un trajet
+ * Supprime un trajet.
+ *
+ * Vérifie :
+ * - que le trajet existe
+ * - que l\'utilisateur est l\'auteur ou admin
+ *
+ * @param int $id ID du trajet
+ * @return void
  */',
-        'startLine' => 165,
-        'endLine' => 175,
+        'startLine' => 277,
+        'endLine' => 301,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

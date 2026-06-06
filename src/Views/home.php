@@ -1,159 +1,125 @@
-<?php require_once __DIR__ . '/partials/header.php'; ?>
-
 <?php
-$page = $page ?? 1;
-$totalPages = $totalPages ?? 1;
-$agencies = $agencies ?? [];
-$trips = $trips ?? [];
+/** @var array $trips */
 ?>
 
-<div class="container mt-4">
+<?php require __DIR__ . '/_partials/header.php'; ?>
 
-    <h1 class="fw-bold mb-4" style="color:#111827;">Trajets disponibles</h1>
+<div class="container py-5">
 
-    <!-- 🔵 FILTRES PUBLICS -->
-    <div class="saas-card p-4 mb-4">
+    <section class="text-center mb-5">
+        <h1 class="fw-bold mb-3">Trouvez votre prochain trajet</h1>
+        <p class="text-muted fs-5">Des trajets fiables, rapides et sécurisés partout en France.</p>
+        <a href="/trips" class="btn btn-primary btn-lg mt-3">Voir tous les trajets</a>
+    </section>
 
-        <h5 class="fw-semibold mb-3">Rechercher un trajet</h5>
+    <section class="mb-5">
+        <h2 class="fw-semibold mb-4">Trajets disponibles</h2>
 
-        <form method="GET" action="/" class="row g-3 search-form">
+        <div class="row g-4">
+            <?php foreach ($trips as $t): ?>
+                <div class="col-md-4">
+                    <div class="saas-card p-4 h-100 d-flex flex-column justify-content-between">
 
-            <!-- Départ -->
-            <div class="col-md-3">
-                <label class="form-label fw-semibold">Départ</label>
-                <select name="departure" class="form-select">
-                    <option value="">Toutes destinations</option>
-                    <?php foreach ($agencies as $agency): ?>
-                        <option value="<?= $agency['id'] ?>"
-                            <?= ($_GET['departure'] ?? '') == $agency['id'] ? 'selected' : '' ?>>
-                            <?= htmlspecialchars($agency['name']) ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-
-            <!-- Arrivée -->
-            <div class="col-md-3">
-                <label class="form-label fw-semibold">Arrivée</label>
-                <select name="arrival" class="form-select">
-                    <option value="">Toutes destinations</option>
-                    <?php foreach ($agencies as $agency): ?>
-                        <option value="<?= $agency['id'] ?>"
-                            <?= ($_GET['arrival'] ?? '') == $agency['id'] ? 'selected' : '' ?>>
-                            <?= htmlspecialchars($agency['name']) ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-
-            <!-- Date -->
-            <div class="col-md-3">
-                <label class="form-label fw-semibold">Date</label>
-                <input type="date" name="date" class="form-control"
-                       value="<?= htmlspecialchars($_GET['date'] ?? '') ?>">
-            </div>
-
-            <!-- Boutons -->
-            <div class="col-md-3 d-flex align-items-end gap-2">
-                <button class="btn btn-primary w-100 fw-semibold">Filtrer</button>
-                <a href="/" class="btn btn-outline-secondary w-100">Réinitialiser</a>
-            </div>
-
-        </form>
-
-    </div>
-
-    <!-- 🟢 LISTE DES TRAJETS -->
-    <div class="row">
-
-        <?php if (empty($trips)): ?>
-
-            <div class="col-12">
-                <div class="alert alert-info">Aucun trajet disponible pour le moment.</div>
-            </div>
-
-        <?php else: ?>
-
-            <?php foreach ($trips as $trip): ?>
-                <div class="col-md-4 mb-4">
-                    <div class="trip-card shadow-sm h-100">
-
-                        <div class="card-body">
-
+                        <div>
                             <h5 class="fw-bold mb-2">
-                                <?= htmlspecialchars($trip['departure_agency_name']) ?>
+                                <?= htmlspecialchars($t['departure_agency']) ?>
                                 →
-                                <?= htmlspecialchars($trip['arrival_agency_name']) ?>
+                                <?= htmlspecialchars($t['arrival_agency']) ?>
                             </h5>
 
-                            <p class="mb-1 text-muted">
-                                <strong>Départ :</strong><br>
-                                <?= date('d/m/Y H:i', strtotime($trip['departure_datetime'])) ?>
+                            <p class="mb-1">
+                                <strong>Départ :</strong>
+                                <?= date('d/m/Y H:i', strtotime($t['departure_datetime'])) ?>
                             </p>
 
-                            <p class="mb-1 text-muted">
-                                <strong>Arrivée :</strong><br>
-                                <?= date('d/m/Y H:i', strtotime($trip['arrival_datetime'])) ?>
+                            <p class="mb-1">
+                                <strong>Arrivée :</strong>
+                                <?= date('d/m/Y H:i', strtotime($t['arrival_datetime'])) ?>
                             </p>
 
-                            <p class="mb-1 text-muted">
-                                <strong>Conducteur :</strong><br>
-                                <?= htmlspecialchars($trip['driver_firstname'] . ' ' . $trip['driver_lastname']) ?>
+                            <p class="mb-1">
+                                <strong>Conducteur :</strong>
+                                <?= htmlspecialchars($t['driver_firstname']) ?>
+                                <?= htmlspecialchars($t['driver_lastname']) ?>
                             </p>
 
-                            <p class="mb-3 text-muted">
-                                <strong>Places disponibles :</strong>
-                                <?= $trip['seats_available'] ?> / <?= $trip['seats_total'] ?>
+                            <p class="mb-3">
+                                <strong>Places :</strong>
+                                <?= $t['seats_available'] ?>/<?= $t['seats_total'] ?>
                             </p>
+                        </div>
 
-                            <a href="/trip/<?= $trip['id'] ?>" class="btn btn-primary w-100 fw-semibold">
-                                Voir le trajet
-                            </a>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <button 
+                                class="btn btn-outline-primary w-100 mb-2" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#tripModal<?= $t['id'] ?>">
+                                Infos
+                            </button>
+                        <?php endif; ?>
+
+                        <a href="/trip/<?= $t['id'] ?>" class="btn btn-primary w-100 mt-3">
+                            Voir le trajet
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- MODALE INFOS TRAJET -->
+                <?php if (isset($_SESSION['user'])): ?>
+                <div class="modal fade" id="tripModal<?= $t['id'] ?>" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Informations du trajet</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <p><strong>Conducteur :</strong> 
+                                    <?= htmlspecialchars($t['driver_firstname']) ?>
+                                    <?= htmlspecialchars($t['driver_lastname']) ?>
+                                </p>
+
+                                <p><strong>Email :</strong> 
+                                    <?= htmlspecialchars($t['driver_email'] ?? 'Non renseigné') ?>
+                                </p>
+
+                                <p><strong>Téléphone :</strong> 
+                                    <?= htmlspecialchars($t['driver_phone'] ?? 'Non renseigné') ?>
+                                </p>
+
+                                <p><strong>Places totales :</strong> 
+                                    <?= $t['seats_total'] ?>
+                                </p>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
 
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+
             <?php endforeach; ?>
+        </div>
 
+        <?php if (empty($trips)): ?>
+            <p class="text-center text-muted mt-4">Aucun trajet disponible pour le moment.</p>
         <?php endif; ?>
+    </section>
 
-    </div>
-
-    <!-- 🔵 PAGINATION -->
-    <?php if ($totalPages > 1): ?>
-        <nav>
-            <ul class="pagination justify-content-center mt-4">
-
-                <!-- Précédent -->
-                <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
-                    <a class="page-link"
-                       href="?<?= http_build_query(array_merge($_GET, ['page' => $page - 1])) ?>">
-                        Précédent
-                    </a>
-                </li>
-
-                <!-- Pages -->
-                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link"
-                           href="?<?= http_build_query(array_merge($_GET, ['page' => $i])) ?>">
-                            <?= $i ?>
-                        </a>
-                    </li>
-                <?php endfor; ?>
-
-                <!-- Suivant -->
-                <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
-                    <a class="page-link"
-                       href="?<?= http_build_query(array_merge($_GET, ['page' => $page + 1])) ?>">
-                        Suivant
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-    <?php endif; ?>
+    <section class="text-center mt-5">
+        <h2 class="fw-semibold mb-3">Vous êtes conducteur ?</h2>
+        <p class="text-muted fs-5 mb-4">Proposez un trajet et gagnez de l’argent en partageant votre route.</p>
+        <a href="/trip/create" class="btn btn-outline-primary btn-lg">Créer un trajet</a>
+    </section>
 
 </div>
 
-<?php require_once __DIR__ . '/partials/footer.php'; ?>
+<?php require __DIR__ . '/_partials/footer.php'; ?>

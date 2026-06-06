@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Models\AgencyModel.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\AgencyModel
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-228651069438a6479e0fa7f9b447c88cfc5230ce2b9a88b3c3b983b99f3f0795',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-b38d28a21008d7c5599fd45be3391c493332b6772eb699dca1cc11be034181ba',
    'data' => 
   array (
     'locatedSource' => 
@@ -22,15 +22,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'isEnum' => false,
     'isBackedEnum' => false,
     'modifiers' => 0,
-    'docComment' => '/**
- * AgencyModel
- * Gestion des agences (CRUD admin)
- */',
+    'docComment' => NULL,
     'attributes' => 
     array (
     ),
-    'startLine' => 11,
-    'endLine' => 75,
+    'startLine' => 7,
+    'endLine' => 69,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Models\\Database',
@@ -48,33 +45,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
-      '__construct' => 
-      array (
-        'name' => '__construct',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 13,
-        'endLine' => 16,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\AgencyModel',
-        'implementingClassName' => 'App\\Models\\AgencyModel',
-        'currentClassName' => 'App\\Models\\AgencyModel',
-        'aliasName' => NULL,
-      ),
       'getAll' => 
       array (
         'name' => 'getAll',
@@ -86,9 +56,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 18,
-        'endLine' => 22,
+        'docComment' => '/**
+ * Récupère toutes les agences
+ */',
+        'startLine' => 12,
+        'endLine' => 16,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -126,8 +98,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 24,
-            'endLine' => 24,
+            'startLine' => 21,
+            'endLine' => 21,
             'startColumn' => 29,
             'endColumn' => 35,
             'parameterIndex' => 0,
@@ -139,9 +111,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 24,
-        'endLine' => 31,
+        'docComment' => '/**
+ * Récupère une agence par ID
+ */',
+        'startLine' => 21,
+        'endLine' => 27,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -179,8 +153,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 33,
-            'endLine' => 33,
+            'startLine' => 32,
+            'endLine' => 32,
             'startColumn' => 28,
             'endColumn' => 39,
             'parameterIndex' => 0,
@@ -192,9 +166,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 33,
-        'endLine' => 39,
+        'docComment' => '/**
+ * Crée une nouvelle agence
+ */',
+        'startLine' => 32,
+        'endLine' => 37,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -232,8 +208,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 41,
-            'endLine' => 41,
+            'startLine' => 42,
+            'endLine' => 42,
             'startColumn' => 28,
             'endColumn' => 34,
             'parameterIndex' => 0,
@@ -258,8 +234,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 41,
-            'endLine' => 41,
+            'startLine' => 42,
+            'endLine' => 42,
             'startColumn' => 37,
             'endColumn' => 48,
             'parameterIndex' => 1,
@@ -271,9 +247,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 41,
-        'endLine' => 48,
+        'docComment' => '/**
+ * Met à jour une agence
+ */',
+        'startLine' => 42,
+        'endLine' => 50,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -311,8 +289,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 50,
-            'endLine' => 50,
+            'startLine' => 55,
+            'endLine' => 55,
             'startColumn' => 28,
             'endColumn' => 34,
             'parameterIndex' => 0,
@@ -324,54 +302,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 50,
-        'endLine' => 56,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\AgencyModel',
-        'implementingClassName' => 'App\\Models\\AgencyModel',
-        'currentClassName' => 'App\\Models\\AgencyModel',
-        'aliasName' => NULL,
-      ),
-      'countTripsForAgency' => 
-      array (
-        'name' => 'countTripsForAgency',
-        'parameters' => 
-        array (
-          'agencyId' => 
-          array (
-            'name' => 'agencyId',
-            'default' => NULL,
-            'type' => NULL,
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 58,
-            'endLine' => 58,
-            'startColumn' => 41,
-            'endColumn' => 49,
-            'parameterIndex' => 0,
-            'isOptional' => false,
-          ),
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 58,
-        'endLine' => 68,
+        'docComment' => '/**
+ * Supprime une agence
+ */',
+        'startLine' => 55,
+        'endLine' => 60,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -396,9 +331,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/** ⭐ Méthode manquante : ajoutée ici */',
-        'startLine' => 71,
-        'endLine' => 74,
+        'docComment' => '/**
+ * Compte toutes les agences
+ */',
+        'startLine' => 65,
+        'endLine' => 68,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

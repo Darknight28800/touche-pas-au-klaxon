@@ -2,7 +2,7 @@
 
 // osfsl-C:/xampp/htdocs/touche-pas-au-klaxon/vendor/composer/../phpoffice/phpspreadsheet/src/PhpSpreadsheet/Style/Font.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-7b389c09448223f74096a864133a4943158233d780890f6bc0ec2a192e894ca7-8.2.31',
+   'variableKey' => 'v2-7b389c09448223f74096a864133a4943158233d780890f6bc0ec2a192e894ca7-8.2.12',
    'data' => 
   array (
     'classes' => 

@@ -30,51 +30,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
-      '1e2ac4165003721fcb1888c9a63fc167' => 
-      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-         'namespace' => 'App\\Models',
-         'uses' => 
-        array (
-          'pdo' => 'PDO',
-        ),
-         'className' => 'App\\Models\\AgencyModel',
-         'functionName' => '__construct',
-         'templatePhpDocNodes' => 
-        array (
-        ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
-         'typeAliasesMap' => 
-        array (
-        ),
-         'bypassTypeAliases' => false,
-         'constUses' => 
-        array (
-        ),
-         'typeAliasClassName' => NULL,
-         'traitData' => NULL,
-      )),
       '459f42bdde2b4409009299ced3cfa069' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Models',
@@ -87,29 +42,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -132,29 +65,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -177,29 +88,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -222,29 +111,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -267,74 +134,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
-         'typeAliasesMap' => 
-        array (
-        ),
-         'bypassTypeAliases' => false,
-         'constUses' => 
-        array (
-        ),
-         'typeAliasClassName' => NULL,
-         'traitData' => NULL,
-      )),
-      '6ad6c2f010507d757eaa62e363f50e79' => 
-      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-         'namespace' => 'App\\Models',
-         'uses' => 
-        array (
-          'pdo' => 'PDO',
-        ),
-         'className' => 'App\\Models\\AgencyModel',
-         'functionName' => 'countTripsForAgency',
-         'templatePhpDocNodes' => 
-        array (
-        ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -357,29 +157,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'pdo' => 'PDO',
-          ),
-           'className' => 'App\\Models\\AgencyModel',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
+         'parent' => NULL,
          'typeAliasesMap' => 
         array (
         ),
@@ -393,7 +171,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\AgencyModel.php' => '228651069438a6479e0fa7f9b447c88cfc5230ce2b9a88b3c3b983b99f3f0795',
+      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\AgencyModel.php' => 'b38d28a21008d7c5599fd45be3391c493332b6772eb699dca1cc11be034181ba',
     ),
   ),
 ));

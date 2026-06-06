@@ -1,0 +1,51 @@
+/* ============================
+   TRIPS PAGES
+   ============================ */
+
+@use "../base/mixins";
+
+/* Create & Edit */
+.trip-form {
+    @include mixins.card;
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .modern-input {
+        @include mixins.modern-input;
+    }
+
+    button {
+        @include mixins.btn-primary;
+        width: 100%;
+    }
+
+    .btn-light {
+        border-radius: var(--radius);
+    }
+}
+
+/* Show */
+.trip-details {
+    @include mixins.card;
+
+    h2 {
+        font-weight: 700;
+    }
+
+    p {
+        margin-bottom: var(--space-sm);
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: var(--space-lg);
+
+        .btn-warning,
+        .btn-danger {
+            border-radius: var(--radius);
+        }
+    }
+}

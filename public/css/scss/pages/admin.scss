@@ -1,0 +1,56 @@
+/* ============================
+   ADMIN PAGES
+   ============================ */
+
+@use "../base/mixins";
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+
+    h1 {
+        font-weight: 700;
+    }
+}
+
+.admin-table {
+    @include mixins.card;
+
+    table {
+        border-radius: var(--radius);
+        overflow: hidden;
+
+        thead {
+            background: var(--primary-dark);
+            color: #fff;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 116, 199, 0.08);
+        }
+    }
+}
+
+.admin-form {
+    @include mixins.card;
+
+    .form-label {
+        font-weight: 600;
+    }
+
+    .modern-input {
+        @include mixins.modern-input;
+    }
+
+    button {
+        @include mixins.btn-primary;
+    }
+}
+
+[data-theme="dark"] {
+    .admin-table table tbody tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}

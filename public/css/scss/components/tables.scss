@@ -1,0 +1,20 @@
+@use "../base/variables";
+
+.table-dark{
+border-radius:var(--radius);
+overflow:hidden;
+background:var(--bg-card);
+color:var(--text);
+}
+.table-dark thead th{
+background:var(--bg-card);
+border-bottom:2px solid var(--border);
+}
+.table-dark tbody tr:hover{
+background:rgba(255,255,255,0.04);
+}
+.table-dark td,
+.table-dark th{
+vertical-align:middle;
+}
+

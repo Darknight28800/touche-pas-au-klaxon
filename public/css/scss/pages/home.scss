@@ -1,0 +1,40 @@
+@use "../base/mixins";
+
+/* ============================
+   HOME PAGE
+   ============================ */
+
+.home-filters {
+    @include mixins.card;
+    margin-bottom: var(--space-lg);
+
+    form {
+        .form-label {
+            font-weight: 600;
+        }
+    }
+}
+
+.home-results {
+    @include mixins.card;
+
+    table {
+        border-radius: var(--radius);
+        overflow: hidden;
+
+        thead {
+            background: var(--primary-dark);
+            color: #fff;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 116, 199, 0.08);
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .home-results table tbody tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}

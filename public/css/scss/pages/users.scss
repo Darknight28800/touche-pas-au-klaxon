@@ -1,0 +1,39 @@
+@use "../base/mixins";
+
+/* Badge rôle utilisateur */
+.user-role-badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    &.admin {
+    background: var(--primary);
+    color: white;
+    }
+
+    &.user {
+    background: var(--secondary);
+    color: white;
+    }
+}
+
+/* Actions utilisateur */
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Page login */
+.login-wrapper {
+    max-width: 420px;
+    margin: 5rem auto;
+}
+
+.login-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}

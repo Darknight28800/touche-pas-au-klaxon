@@ -32,7 +32,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\dashboard.php' => '5fb1b48ffc38b281c0326ce11f0e68c22c0fce943a46dc63b1d34d55f1b4fd91',
+      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\dashboard.php' => '5c5ba2a01b9bcca2e4a081a8c623717c0886ce73736fc211b54db70e9268b590',
     ),
   ),
 ));

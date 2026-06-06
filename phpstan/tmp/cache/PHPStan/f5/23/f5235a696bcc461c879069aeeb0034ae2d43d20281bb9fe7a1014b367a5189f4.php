@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Router\altorouter\AltoRouter.php-PHPStan\BetterReflection\Reflection\ReflectionClass-AltoRouter
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-82f20a5ac15ad18c77631af3907ead0a809a05c6b9498389461e42c7766debfc',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-d149fa056ca85ff89af239cc3a5eb1d23b584330433172ff918d60d9bedcd767',
    'data' => 
   array (
     'locatedSource' => 
@@ -26,8 +26,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 15,
-    'endLine' => 300,
+    'startLine' => 8,
+    'endLine' => 251,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -54,12 +54,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[]',
           'attributes' => 
           array (
-            'startLine' => 20,
-            'endLine' => 20,
+            'startLine' => 13,
+            'endLine' => 13,
             'startTokenPos' => 18,
-            'startFilePos' => 1230,
+            'startFilePos' => 161,
             'endTokenPos' => 19,
-            'endFilePos' => 1231,
+            'endFilePos' => 162,
           ),
         ),
         'docComment' => '/**
@@ -68,8 +68,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 20,
-        'endLine' => 20,
+        'startLine' => 13,
+        'endLine' => 13,
         'startColumn' => 5,
         'endColumn' => 27,
         'isPromoted' => false,
@@ -91,12 +91,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[]',
           'attributes' => 
           array (
-            'startLine' => 25,
-            'endLine' => 25,
+            'startLine' => 18,
+            'endLine' => 18,
             'startTokenPos' => 30,
-            'startFilePos' => 1325,
+            'startFilePos' => 256,
             'endTokenPos' => 31,
-            'endFilePos' => 1326,
+            'endFilePos' => 257,
           ),
         ),
         'docComment' => '/**
@@ -105,8 +105,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'startLine' => 25,
-        'endLine' => 25,
+        'startLine' => 18,
+        'endLine' => 18,
         'startColumn' => 5,
         'endColumn' => 32,
         'isPromoted' => false,
@@ -128,22 +128,22 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'\'',
           'attributes' => 
           array (
-            'startLine' => 30,
-            'endLine' => 30,
+            'startLine' => 23,
+            'endLine' => 23,
             'startTokenPos' => 42,
-            'startFilePos' => 1490,
+            'startFilePos' => 387,
             'endTokenPos' => 42,
-            'endFilePos' => 1491,
+            'endFilePos' => 388,
           ),
         ),
         'docComment' => '/**
- * @var string Can be used to ignore leading part of the Request URL (if main file lives in subdirectory of host)
+ * @var string Base path of the application (useful when app is in a subfolder)
  */',
         'attributes' => 
         array (
         ),
-        'startLine' => 30,
-        'endLine' => 30,
+        'startLine' => 23,
+        'endLine' => 23,
         'startColumn' => 5,
         'endColumn' => 29,
         'isPromoted' => false,
@@ -165,22 +165,22 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'i\' => \'[0-9]++\', \'a\' => \'[0-9A-Za-z]++\', \'h\' => \'[0-9A-Fa-f]++\', \'*\' => \'.+?\', \'**\' => \'.++\', \'\' => \'[^/\\.]++\']',
           'attributes' => 
           array (
-            'startLine' => 35,
-            'endLine' => 42,
+            'startLine' => 28,
+            'endLine' => 35,
             'startTokenPos' => 53,
-            'startFilePos' => 1602,
+            'startFilePos' => 490,
             'endTokenPos' => 96,
-            'endFilePos' => 1774,
+            'endFilePos' => 662,
           ),
         ),
         'docComment' => '/**
- * @var array Array of default match types (regex helpers)
+ * @var array Default match types (regex helpers)
  */',
         'attributes' => 
         array (
         ),
-        'startLine' => 35,
-        'endLine' => 42,
+        'startLine' => 28,
+        'endLine' => 35,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -206,12 +206,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '[]',
               'attributes' => 
               array (
-                'startLine' => 52,
-                'endLine' => 52,
+                'startLine' => 40,
+                'endLine' => 40,
                 'startTokenPos' => 113,
-                'startFilePos' => 2011,
+                'startFilePos' => 749,
                 'endTokenPos' => 114,
-                'endFilePos' => 2012,
+                'endFilePos' => 750,
               ),
             ),
             'type' => 
@@ -229,8 +229,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 52,
-            'endLine' => 52,
+            'startLine' => 40,
+            'endLine' => 40,
             'startColumn' => 33,
             'endColumn' => 50,
             'parameterIndex' => 0,
@@ -244,12 +244,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\'\'',
               'attributes' => 
               array (
-                'startLine' => 52,
-                'endLine' => 52,
+                'startLine' => 40,
+                'endLine' => 40,
                 'startTokenPos' => 123,
-                'startFilePos' => 2034,
+                'startFilePos' => 772,
                 'endTokenPos' => 123,
-                'endFilePos' => 2035,
+                'endFilePos' => 773,
               ),
             ),
             'type' => 
@@ -267,8 +267,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 52,
-            'endLine' => 52,
+            'startLine' => 40,
+            'endLine' => 40,
             'startColumn' => 53,
             'endColumn' => 73,
             'parameterIndex' => 1,
@@ -282,12 +282,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '[]',
               'attributes' => 
               array (
-                'startLine' => 52,
-                'endLine' => 52,
+                'startLine' => 40,
+                'endLine' => 40,
                 'startTokenPos' => 132,
-                'startFilePos' => 2058,
+                'startFilePos' => 796,
                 'endTokenPos' => 133,
-                'endFilePos' => 2059,
+                'endFilePos' => 797,
               ),
             ),
             'type' => 
@@ -305,8 +305,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 52,
-            'endLine' => 52,
+            'startLine' => 40,
+            'endLine' => 40,
             'startColumn' => 76,
             'endColumn' => 97,
             'parameterIndex' => 2,
@@ -319,15 +319,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Create router in one call from config.
- *
- * @param array $routes
- * @param string $basePath
- * @param array $matchTypes
- * @throws Exception
+ * Constructor
  */',
-        'startLine' => 52,
-        'endLine' => 57,
+        'startLine' => 40,
+        'endLine' => 45,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -361,12 +356,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Retrieves all routes.
- * Useful if you want to process or display routes.
- * @return array All routes.
+ * Get all routes
  */',
-        'startLine' => 64,
-        'endLine' => 67,
+        'startLine' => 50,
+        'endLine' => 53,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -396,8 +389,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 81,
-            'endLine' => 81,
+            'startLine' => 58,
+            'endLine' => 58,
             'startColumn' => 31,
             'endColumn' => 37,
             'parameterIndex' => 0,
@@ -410,19 +403,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Add multiple routes at once from array in the following format:
- *
- *   $routes = [
- *      [$method, $route, $target, $name]
- *   ];
- *
- * @param array $routes
- * @return void
- * @author Koen Punt
- * @throws Exception
+ * Add multiple routes
  */',
-        'startLine' => 81,
-        'endLine' => 89,
+        'startLine' => 58,
+        'endLine' => 67,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => true,
@@ -460,8 +444,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 96,
-            'endLine' => 96,
+            'startLine' => 72,
+            'endLine' => 72,
             'startColumn' => 33,
             'endColumn' => 48,
             'parameterIndex' => 0,
@@ -474,12 +458,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Set the base path.
- * Useful if you are running your application from a subdirectory.
- * @param string $basePath
+ * Set base path
  */',
-        'startLine' => 96,
-        'endLine' => 99,
+        'startLine' => 72,
+        'endLine' => 81,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -517,8 +499,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 106,
-            'endLine' => 106,
+            'startLine' => 86,
+            'endLine' => 86,
             'startColumn' => 35,
             'endColumn' => 51,
             'parameterIndex' => 0,
@@ -531,12 +513,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Add named match types. It uses array_merge so keys can be overwritten.
- *
- * @param array $matchTypes The key is the name and the value is the regex.
+ * Add custom match types
  */',
-        'startLine' => 106,
-        'endLine' => 109,
+        'startLine' => 86,
+        'endLine' => 89,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -574,8 +554,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 120,
-            'endLine' => 120,
+            'startLine' => 94,
+            'endLine' => 94,
             'startColumn' => 25,
             'endColumn' => 38,
             'parameterIndex' => 0,
@@ -600,8 +580,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 120,
-            'endLine' => 120,
+            'startLine' => 94,
+            'endLine' => 94,
             'startColumn' => 41,
             'endColumn' => 53,
             'parameterIndex' => 1,
@@ -618,8 +598,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 120,
-            'endLine' => 120,
+            'startLine' => 94,
+            'endLine' => 94,
             'startColumn' => 56,
             'endColumn' => 62,
             'parameterIndex' => 2,
@@ -633,12 +613,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\\null',
               'attributes' => 
               array (
-                'startLine' => 120,
-                'endLine' => 120,
-                'startTokenPos' => 352,
-                'startFilePos' => 4223,
-                'endTokenPos' => 352,
-                'endFilePos' => 4226,
+                'startLine' => 94,
+                'endLine' => 94,
+                'startTokenPos' => 398,
+                'startFilePos' => 2053,
+                'endTokenPos' => 398,
+                'endFilePos' => 2056,
               ),
             ),
             'type' => 
@@ -675,8 +655,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 120,
-            'endLine' => 120,
+            'startLine' => 94,
+            'endLine' => 94,
             'startColumn' => 65,
             'endColumn' => 84,
             'parameterIndex' => 3,
@@ -689,16 +669,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Map a route to a target
- *
- * @param string $method One of 5 HTTP Methods, or a pipe-separated list of multiple HTTP Methods (GET|POST|PATCH|PUT|DELETE)
- * @param string $route The route regex, custom regex must start with an @. You can use multiple pre-set regex filters, like [i:id]
- * @param mixed $target The target where this route should point to. Can be anything.
- * @param string $name Optional name of this route. Supply if you want to reverse route this url in your application.
- * @throws Exception
+ * Map a route
  */',
-        'startLine' => 120,
-        'endLine' => 131,
+        'startLine' => 94,
+        'endLine' => 104,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => true,
@@ -736,8 +710,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 143,
-            'endLine' => 143,
+            'startLine' => 109,
+            'endLine' => 109,
             'startColumn' => 30,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -751,12 +725,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '[]',
               'attributes' => 
               array (
-                'startLine' => 143,
-                'endLine' => 143,
-                'startTokenPos' => 456,
-                'startFilePos' => 4978,
-                'endTokenPos' => 457,
-                'endFilePos' => 4979,
+                'startLine' => 109,
+                'endLine' => 109,
+                'startTokenPos' => 502,
+                'startFilePos' => 2477,
+                'endTokenPos' => 503,
+                'endFilePos' => 2478,
               ),
             ),
             'type' => 
@@ -774,8 +748,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 143,
-            'endLine' => 143,
+            'startLine' => 109,
+            'endLine' => 109,
             'startColumn' => 49,
             'endColumn' => 66,
             'parameterIndex' => 1,
@@ -796,17 +770,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Reversed routing
- *
- * Generate the URL for a named route. Replace regexes with supplied parameters
- *
- * @param string $routeName The name of the route.
- * @param array $params Associative array of parameters to replace placeholders with.
- * @return string The URL of the route with named parameters in place.
- * @throws Exception
+ * Generate URL for a named route
  */',
-        'startLine' => 143,
-        'endLine' => 179,
+        'startLine' => 109,
+        'endLine' => 145,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => true,
@@ -833,12 +800,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\\null',
               'attributes' => 
               array (
-                'startLine' => 187,
-                'endLine' => 187,
-                'startTokenPos' => 739,
-                'startFilePos' => 6544,
-                'endTokenPos' => 739,
-                'endFilePos' => 6547,
+                'startLine' => 150,
+                'endLine' => 150,
+                'startTokenPos' => 773,
+                'startFilePos' => 3553,
+                'endTokenPos' => 773,
+                'endFilePos' => 3556,
               ),
             ),
             'type' => 
@@ -875,8 +842,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 187,
-            'endLine' => 187,
+            'startLine' => 150,
+            'endLine' => 150,
             'startColumn' => 27,
             'endColumn' => 52,
             'parameterIndex' => 0,
@@ -890,12 +857,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\\null',
               'attributes' => 
               array (
-                'startLine' => 187,
-                'endLine' => 187,
-                'startTokenPos' => 749,
-                'startFilePos' => 6575,
-                'endTokenPos' => 749,
-                'endFilePos' => 6578,
+                'startLine' => 150,
+                'endLine' => 150,
+                'startTokenPos' => 783,
+                'startFilePos' => 3584,
+                'endTokenPos' => 783,
+                'endFilePos' => 3587,
               ),
             ),
             'type' => 
@@ -932,8 +899,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 187,
-            'endLine' => 187,
+            'startLine' => 150,
+            'endLine' => 150,
             'startColumn' => 55,
             'endColumn' => 83,
             'parameterIndex' => 1,
@@ -946,13 +913,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Match a given Request Url against stored routes
- * @param string $requestUrl
- * @param string $requestMethod
- * @return array|boolean Array with route information on success, false on failure (no match).
+ * Match a request URL
  */',
-        'startLine' => 187,
-        'endLine' => 261,
+        'startLine' => 150,
+        'endLine' => 212,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -990,8 +954,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 268,
-            'endLine' => 268,
+            'startLine' => 217,
+            'endLine' => 217,
             'startColumn' => 37,
             'endColumn' => 49,
             'parameterIndex' => 0,
@@ -1012,12 +976,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Compile the regex for a given route (EXPENSIVE)
- * @param string $route
- * @return string
+ * Compile route regex
  */',
-        'startLine' => 268,
-        'endLine' => 299,
+        'startLine' => 217,
+        'endLine' => 250,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

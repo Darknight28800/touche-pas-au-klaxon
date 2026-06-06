@@ -1,111 +1,79 @@
-<?php require_once __DIR__ . '/../partials/header.php'; ?>
-
 <?php
 /** @var array $trip */
 /** @var array $agencies */
 ?>
 
+<?php require __DIR__ . '/../_partials/header.php'; ?>
 
-<div class="container" style="max-width: 750px;">
+<div class="container mt-5">
 
-    <div class="saas-card fade-in mb-4">
+    <div class="saas-card">
 
-        <h2 class="mb-3">Modifier le trajet</h2>
-        <p class="text-muted mb-4">Modifie les informations du trajet puis enregistre les changements.</p>
+        <h2 class="fw-bold mb-3">Modifier le trajet</h2>
 
-        <!-- 🔴 Message d’erreur -->
         <?php if (!empty($_SESSION['error'])): ?>
-            <div class="alert alert-danger">
-                <?= $_SESSION['error']; unset($_SESSION['error']); ?>
-            </div>
+            <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
         <?php endif; ?>
 
-        <!-- 🟢 Message de succès -->
-        <?php if (!empty($_SESSION['success'])): ?>
-            <div class="alert alert-success">
-                <?= $_SESSION['success']; unset($_SESSION['success']); ?>
-            </div>
-        <?php endif; ?>
-
-        <form action="/trip/<?= $trip['id'] ?>/edit" method="POST">
-
-            <h5 class="mb-3">Informations du trajet</h5>
+        <form method="POST" action="/trip/<?= $trip['id'] ?>/update">
 
             <div class="row g-3">
 
                 <div class="col-md-6">
-                    <label class="form-label">Agence de départ</label>
-                    <select name="departure_agency_id" class="form-select" required>
-                        <?php foreach ($agencies as $agency): ?>
-                            <option value="<?= $agency['id'] ?>"
-                                <?= $agency['id'] == $trip['departure_agency_id'] ? 'selected' : '' ?>>
-                                <?= $agency['name'] ?>
+                    <label class="form-label fw-semibold">Agence de départ</label>
+                    <select name="departure_agency_id" class="form-select modern-input">
+                        <?php foreach ($agencies as $a): ?>
+                            <option value="<?= $a['id'] ?>" 
+                                <?= ($trip['departure_agency_id'] == $a['id']) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($a['name']) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Agence d'arrivée</label>
-                    <select name="arrival_agency_id" class="form-select" required>
-                        <?php foreach ($agencies as $agency): ?>
-                            <option value="<?= $agency['id'] ?>"
-                                <?= $agency['id'] == $trip['arrival_agency_id'] ? 'selected' : '' ?>>
-                                <?= $agency['name'] ?>
+                    <label class="form-label fw-semibold">Agence d’arrivée</label>
+                    <select name="arrival_agency_id" class="form-select modern-input">
+                        <?php foreach ($agencies as $a): ?>
+                            <option value="<?= $a['id'] ?>" 
+                                <?= ($trip['arrival_agency_id'] == $a['id']) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($a['name']) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Date et heure de départ</label>
-                    <input type="datetime-local"
-                        name="departure_datetime"
-                        class="form-control"
-                        value="<?= date('Y-m-d\TH:i', strtotime($trip['departure_datetime'])) ?>"
-                        required>
+                    <label class="form-label fw-semibold">Date de départ</label>
+                    <input type="datetime-local" name="departure_datetime"
+                           class="form-control modern-input"
+                           value="<?= date('Y-m-d\TH:i', strtotime($trip['departure_datetime'])) ?>">
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Date et heure d'arrivée</label>
-                    <input type="datetime-local"
-                        name="arrival_datetime"
-                        class="form-control"
-                        value="<?= date('Y-m-d\TH:i', strtotime($trip['arrival_datetime'])) ?>"
-                        required>
+                    <label class="form-label fw-semibold">Date d’arrivée</label>
+                    <input type="datetime-local" name="arrival_datetime"
+                           class="form-control modern-input"
+                           value="<?= date('Y-m-d\TH:i', strtotime($trip['arrival_datetime'])) ?>">
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Nombre total de places</label>
-                    <input type="number"
-                        name="seats_total"
-                        class="form-control"
-                        min="1"
-                        value="<?= $trip['seats_total'] ?>"
-                        required>
+                    <label class="form-label fw-semibold">Places totales</label>
+                    <input type="number" name="seats_total" class="form-control modern-input"
+                           value="<?= $trip['seats_total'] ?>" min="1">
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-label">Places disponibles</label>
-                    <input type="number"
-                        name="seats_available"
-                        class="form-control"
-                        min="0"
-                        max="<?= $trip['seats_total'] ?>"
-                        value="<?= $trip['seats_available'] ?>"
-                        required>
+                    <label class="form-label fw-semibold">Places restantes</label>
+                    <input type="number" name="seats_available" class="form-control modern-input"
+                           value="<?= $trip['seats_available'] ?>" min="0">
                 </div>
 
             </div>
 
             <div class="d-flex justify-content-between mt-4">
-                <a href="/trip/<?= $trip['id'] ?>" class="btn btn-outline-secondary">
-                    Retour
-                </a>
-
-                <button type="submit" class="btn btn-primary">
-                    Enregistrer les modifications
-                </button>
+                <a href="/" class="btn btn-light">Retour</a>
+                <button class="btn btn-primary">Enregistrer</button>
             </div>
 
         </form>
@@ -114,4 +82,4 @@
 
 </div>
 
-<?php require_once __DIR__ . '/../partials/footer.php'; ?>
+<?php require __DIR__ . '/../_partials/footer.php'; ?>

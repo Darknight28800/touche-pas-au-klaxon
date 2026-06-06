@@ -1,0 +1,22 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.saas-card{
+background:var(--bg-card);
+border-radius:var(--radius);
+padding:24px;
+box-shadow:var(--shadow);
+transition:all .25s ease;
+}
+.saas-card:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 28px rgba(0,0,0,0.12);
+}
+
+.info-box{
+background:var(--bg-input);
+border-radius:12px;
+border:1px solid var(--border);
+padding:14px 16px;
+}
+

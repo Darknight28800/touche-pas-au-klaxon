@@ -6,171 +6,297 @@ use App\Models\TripModel;
 use App\Models\AgencyModel;
 use App\Core\Auth;
 
-class TripController
+/**
+ * Class TripController
+ *
+ * Gère toutes les opérations liées aux trajets :
+ * - liste publique filtrée
+ * - affichage d'un trajet
+ * - création
+ * - modification
+ * - suppression
+ *
+ * Les actions sensibles nécessitent une authentification.
+ */
+class TripController extends CoreController
 {
     /**
-     * Page d'accueil : liste + filtres + pagination
+     * Initialise les protections globales via CoreController.
      */
-    public function index()
+    public function __construct()
     {
-        $tripModel = new TripModel();
+        parent::__construct();
+    }
+
+    /**
+     * Affiche la liste des trajets publics filtrés.
+     *
+     * Filtres possibles :
+     * - departure (ID agence)
+     * - arrival (ID agence)
+     * - date (YYYY-MM-DD)
+     *
+     * @return void
+     */
+    public function index(): void
+    {
+        $tripModel   = new TripModel();
         $agencyModel = new AgencyModel();
 
-        // 🔵 Filtres
         $filters = [
             'departure' => $_GET['departure'] ?? null,
             'arrival'   => $_GET['arrival'] ?? null,
-            'date'      => $_GET['date'] ?? null
+            'date'      => $_GET['date'] ?? null,
         ];
 
-        // 🔵 Pagination
-        $page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
-        $limit = 6;
-        $offset = ($page - 1) * $limit;
-
-        // 🔵 Récupération trajets + total
-        $trips = $tripModel->getFilteredPublicTrips($filters, $limit, $offset);
-        $totalTrips = $tripModel->countFilteredPublicTrips($filters);
-
-        // 🔵 Nombre total de pages
-        $totalPages = ceil($totalTrips / $limit);
-
-        // 🔵 Agences pour les filtres
+        $trips    = $tripModel->getFilteredTripsPublic($filters);
         $agencies = $agencyModel->getAll();
 
-        require_once __DIR__ . '/../Views/home.php';
+        $this->render('trips/list', [
+            'trips'    => $trips,
+            'agencies' => $agencies,
+            'filters'  => $filters
+        ]);
     }
 
     /**
-     * Affichage d'un trajet
+     * Affiche les détails d'un trajet.
+     *
+     * @param int $id ID du trajet
+     * @return void
      */
-    public function show($id)
+    public function show(int $id): void
     {
         Auth::requireLogin();
 
         $tripModel = new TripModel();
-        $trip = $tripModel->getById($id);
+        $trip      = $tripModel->getById($id);
 
-        require_once __DIR__ . '/../Views/trips/show.php';
+        if (!$trip) {
+            $_SESSION['error'] = "Trajet introuvable.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
+        $this->render('trips/show', ['trip' => $trip]);
     }
 
     /**
-     * Formulaire de création
+     * Affiche le formulaire de création d'un trajet.
+     *
+     * @return void
      */
-    public function createForm()
+    public function createForm(): void
     {
         Auth::requireLogin();
 
         $agencyModel = new AgencyModel();
-        $agencies = $agencyModel->getAll();
+        $agencies    = $agencyModel->getAll();
 
-        require_once __DIR__ . '/../Views/trips/create.php';
+        $this->render('trips/create', ['agencies' => $agencies]);
     }
 
     /**
-     * Création d'un trajet
+     * Traite la création d'un trajet.
+     *
+     * Effectue les contrôles :
+     * - agences différentes
+     * - dates cohérentes
+     * - nombre de places valide
+     *
+     * @return void
      */
-    public function create()
+    public function create(): void
     {
         Auth::requireLogin();
 
-        // 🔵 Récupération des données
-        $departure = $_POST['departure_agency_id'];
-        $arrival = $_POST['arrival_agency_id'];
-        $dateDepart = $_POST['departure_datetime'];
-        $dateArrivee = $_POST['arrival_datetime'];
-        $seatsTotal = intval($_POST['seats_total']);
+        $departure   = $_POST['departure_agency_id'] ?? null;
+        $arrival     = $_POST['arrival_agency_id'] ?? null;
+        $dateDepart  = $_POST['departure_datetime'] ?? null;
+        $dateArrivee = $_POST['arrival_datetime'] ?? null;
+        $seatsTotal  = (int) ($_POST['seats_total'] ?? 0);
 
-        // 🔴 Contrôles de cohérence
-        if ($departure == $arrival) {
+        // Contrôles de cohérence
+        if ($departure === $arrival) {
             $_SESSION['error'] = "L'agence de départ et d'arrivée doivent être différentes.";
-            header('Location: /trip/create');
+            header('Location: ' . $this->router->generate('trip-create'));
             exit;
         }
 
-        if (strtotime($dateArrivee) <= strtotime($dateDepart)) {
+        if (!$dateDepart || !$dateArrivee || strtotime($dateArrivee) <= strtotime($dateDepart)) {
             $_SESSION['error'] = "La date d'arrivée doit être postérieure à la date de départ.";
-            header('Location: /trip/create');
+            header('Location: ' . $this->router->generate('trip-create'));
             exit;
         }
 
         if ($seatsTotal < 1) {
             $_SESSION['error'] = "Le nombre de places doit être supérieur à 0.";
-            header('Location: /trip/create');
+            header('Location: ' . $this->router->generate('trip-create'));
             exit;
         }
 
-        // 🔵 Données finales
+        // Données finales
         $data = [
             'departure_agency_id' => $departure,
-            'arrival_agency_id' => $arrival,
-            'departure_datetime' => $dateDepart,
-            'arrival_datetime' => $dateArrivee,
-            'seats_total' => $seatsTotal,
-            'seats_available' => $seatsTotal,
-            'driver_id' => $_SESSION['user']['id']
+            'arrival_agency_id'   => $arrival,
+            'departure_datetime'  => $dateDepart,
+            'arrival_datetime'    => $dateArrivee,
+            'seats_total'         => $seatsTotal,
+            'seats_available'     => $seatsTotal,
+            'driver_id'           => $_SESSION['user']['id'],
         ];
 
-        $tripModel = new TripModel();
-        $tripModel->create($data);
+        (new TripModel())->create($data);
 
         $_SESSION['success'] = "Trajet créé avec succès.";
-        header('Location: /');
+        header('Location: ' . $this->router->generate('home'));
         exit;
     }
 
     /**
-     * Formulaire d'édition
+     * Affiche le formulaire d'édition d'un trajet.
+     *
+     * Vérifie :
+     * - que le trajet existe
+     * - que l'utilisateur est l'auteur ou admin
+     *
+     * @param int $id ID du trajet
+     * @return void
      */
-    public function editForm($id)
+    public function editForm(int $id): void
     {
         Auth::requireLogin();
 
-        $tripModel = new TripModel();
+        $tripModel   = new TripModel();
         $agencyModel = new AgencyModel();
 
         $trip = $tripModel->getById($id);
+
+        if (!$trip) {
+            $_SESSION['error'] = "Trajet introuvable.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
+        if ($trip['driver_id'] != $_SESSION['user']['id'] && !Auth::isAdmin()) {
+            $_SESSION['error'] = "Vous ne pouvez modifier que vos propres trajets.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
         $agencies = $agencyModel->getAll();
 
-        require_once __DIR__ . '/../Views/trips/edit.php';
+        $this->render('trips/edit', [
+            'trip'     => $trip,
+            'agencies' => $agencies,
+        ]);
     }
 
     /**
-     * Mise à jour d'un trajet
+     * Met à jour un trajet existant.
+     *
+     * Vérifie :
+     * - cohérence des agences
+     * - cohérence des dates
+     * - cohérence des places
+     *
+     * @param int $id ID du trajet
+     * @return void
      */
-    public function update($id)
+    public function update(int $id): void
     {
         Auth::requireLogin();
 
+        $tripModel = new TripModel();
+        $trip      = $tripModel->getById($id);
+
+        if (!$trip) {
+            $_SESSION['error'] = "Trajet introuvable.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
+        if ($trip['driver_id'] != $_SESSION['user']['id'] && !Auth::isAdmin()) {
+            $_SESSION['error'] = "Vous ne pouvez modifier que vos propres trajets.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
+        $departure   = $_POST['departure_agency_id'] ?? null;
+        $arrival     = $_POST['arrival_agency_id'] ?? null;
+        $dateDepart  = $_POST['departure_datetime'] ?? null;
+        $dateArrivee = $_POST['arrival_datetime'] ?? null;
+        $seatsTotal  = (int) ($_POST['seats_total'] ?? 0);
+        $seatsAvail  = (int) ($_POST['seats_available'] ?? 0);
+
+        // Contrôles
+        if ($departure === $arrival) {
+            $_SESSION['error'] = "L'agence de départ et d'arrivée doivent être différentes.";
+            header('Location: ' . $this->router->generate('trip-edit', ['id' => $id]));
+            exit;
+        }
+
+        if (!$dateDepart || !$dateArrivee || strtotime($dateArrivee) <= strtotime($dateDepart)) {
+            $_SESSION['error'] = "La date d'arrivée doit être postérieure à la date de départ.";
+            header('Location: ' . $this->router->generate('trip-edit', ['id' => $id]));
+            exit;
+        }
+
+        if ($seatsTotal < 1 || $seatsAvail < 0 || $seatsAvail > $seatsTotal) {
+            $_SESSION['error'] = "Nombre de places incohérent.";
+            header('Location: ' . $this->router->generate('trip-edit', ['id' => $id]));
+            exit;
+        }
+
         $data = [
-            'departure_agency_id' => $_POST['departure_agency_id'],
-            'arrival_agency_id' => $_POST['arrival_agency_id'],
-            'departure_datetime' => $_POST['departure_datetime'],
-            'arrival_datetime' => $_POST['arrival_datetime'],
-            'seats_total' => $_POST['seats_total'],
-            'seats_available' => $_POST['seats_available']
+            'departure_agency_id' => $departure,
+            'arrival_agency_id'   => $arrival,
+            'departure_datetime'  => $dateDepart,
+            'arrival_datetime'    => $dateArrivee,
+            'seats_total'         => $seatsTotal,
+            'seats_available'     => $seatsAvail,
         ];
 
-        $tripModel = new TripModel();
         $tripModel->update($id, $data);
 
         $_SESSION['success'] = "Trajet modifié avec succès.";
-        header('Location: /');
+        header('Location: ' . $this->router->generate('home'));
         exit;
     }
 
     /**
-     * Suppression d'un trajet
+     * Supprime un trajet.
+     *
+     * Vérifie :
+     * - que le trajet existe
+     * - que l'utilisateur est l'auteur ou admin
+     *
+     * @param int $id ID du trajet
+     * @return void
      */
-    public function delete($id)
+    public function delete(int $id): void
     {
         Auth::requireLogin();
 
         $tripModel = new TripModel();
+        $trip      = $tripModel->getById($id);
+
+        if (!$trip) {
+            $_SESSION['error'] = "Trajet introuvable.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
+        if ($trip['driver_id'] != $_SESSION['user']['id'] && !Auth::isAdmin()) {
+            $_SESSION['error'] = "Vous ne pouvez supprimer que vos propres trajets.";
+            header('Location: ' . $this->router->generate('home'));
+            exit;
+        }
+
         $tripModel->delete($id);
 
         $_SESSION['success'] = "Trajet supprimé.";
-        header('Location: /');
+        header('Location: ' . $this->router->generate('home'));
         exit;
     }
 }

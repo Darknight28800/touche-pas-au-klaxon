@@ -32,6 +32,55 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      '12ad1bdf244cbe3b339ad1d74bce6a15' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Controllers',
+         'uses' => 
+        array (
+          'tripmodel' => 'App\\Models\\TripModel',
+          'agencymodel' => 'App\\Models\\AgencyModel',
+          'auth' => 'App\\Core\\Auth',
+        ),
+         'className' => 'App\\Controllers\\TripController',
+         'functionName' => '__construct',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       '424eef4f1b4ac838550793b323419b7b' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Controllers',
@@ -46,7 +95,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -71,7 +144,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -96,7 +193,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -121,7 +242,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -146,7 +291,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -171,7 +340,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -196,7 +389,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'templatePhpDocNodes' => 
         array (
         ),
-         'parent' => NULL,
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Controllers',
+           'uses' => 
+          array (
+            'tripmodel' => 'App\\Models\\TripModel',
+            'agencymodel' => 'App\\Models\\AgencyModel',
+            'auth' => 'App\\Core\\Auth',
+          ),
+           'className' => 'App\\Controllers\\TripController',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
          'typeAliasesMap' => 
         array (
         ),
@@ -210,7 +427,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\TripController.php' => '74a2f36a47df5ef10fe0984bc22f6f59ed7f95b499b44c0676b439386c3a32dd',
+      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\TripController.php' => '07442cfd26100c1743c71b487e3040842916a551698a914b4ef335660e89b1b2',
     ),
   ),
 ));

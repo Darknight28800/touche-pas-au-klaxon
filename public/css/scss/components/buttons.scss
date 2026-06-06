@@ -1,0 +1,40 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.btn-primary{
+border-radius:var(--radius);
+padding:10px 18px;
+font-weight:600;
+transition:all .25s ease;
+background-color:var(--primary);
+border-color:var(--primary);
+}
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 16px rgba(var(--primary-rgb),.35);
+}
+.btn-primary:active{
+transform:translateY(0);
+box-shadow:none;
+}
+
+.btn-light{
+border-radius:var(--radius);
+border:1px solid var(--border);
+background:var(--bg-card);
+color:var(--text);
+transition:all .2s ease;
+}
+.btn-light:hover{
+background:var(--bg-input);
+}
+
+.btn-secondary{
+border-radius:var(--radius);
+}
+
+.btn-sm{
+border-radius:10px;
+}
+
+

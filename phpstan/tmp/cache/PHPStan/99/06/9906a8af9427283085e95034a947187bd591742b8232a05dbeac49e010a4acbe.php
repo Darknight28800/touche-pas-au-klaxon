@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Controllers\AdminController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Controllers\AdminController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-1f9dbd41ec5bc8bb1df27efaf4b4c351504de559af92a445c46355b5aa8b5a46',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-75fcaea76d2181f2536df7090a774867f734b14a41efdaa6a49cfff5cb96c3ec',
    'data' => 
   array (
     'locatedSource' => 
@@ -22,15 +22,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'isEnum' => false,
     'isBackedEnum' => false,
     'modifiers' => 0,
-    'docComment' => NULL,
+    'docComment' => '/**
+ * Class AdminController
+ *
+ * Gère l\'ensemble des fonctionnalités administrateur :
+ * - tableau de bord
+ * - gestion des utilisateurs
+ * - gestion des agences
+ * - gestion des trajets
+ *
+ * Toutes les actions nécessitent un rôle administrateur.
+ */',
     'attributes' => 
     array (
     ),
-    'startLine' => 11,
-    'endLine' => 435,
+    'startLine' => 20,
+    'endLine' => 387,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => NULL,
+    'parentClassName' => 'App\\Controllers\\CoreController',
     'implementsClassNames' => 
     array (
     ),
@@ -56,9 +66,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 16,
-        'endLine' => 22,
+        'docComment' => '/**
+ * Constructeur : vérifie que l\'utilisateur est administrateur.
+ */',
+        'startLine' => 25,
+        'endLine' => 33,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -77,135 +89,81 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'name' => 'flash',
         'parameters' => 
         array (
+          'type' => 
+          array (
+            'name' => 'type',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'string',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 42,
+            'endLine' => 42,
+            'startColumn' => 28,
+            'endColumn' => 39,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
           'message' => 
           array (
             'name' => 'message',
             'default' => NULL,
-            'type' => NULL,
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
+            'type' => 
             array (
-            ),
-            'startLine' => 27,
-            'endLine' => 27,
-            'startColumn' => 28,
-            'endColumn' => 35,
-            'parameterIndex' => 0,
-            'isOptional' => false,
-          ),
-          'type' => 
-          array (
-            'name' => 'type',
-            'default' => 
-            array (
-              'code' => '\'success\'',
-              'attributes' => 
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
               array (
-                'startLine' => 27,
-                'endLine' => 27,
-                'startTokenPos' => 107,
-                'startFilePos' => 781,
-                'endTokenPos' => 107,
-                'endFilePos' => 789,
+                'name' => 'string',
+                'isIdentifier' => true,
               ),
             ),
-            'type' => NULL,
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 27,
-            'endLine' => 27,
-            'startColumn' => 38,
-            'endColumn' => 54,
+            'startLine' => 42,
+            'endLine' => 42,
+            'startColumn' => 42,
+            'endColumn' => 56,
             'parameterIndex' => 1,
-            'isOptional' => true,
-          ),
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 27,
-        'endLine' => 33,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 4,
-        'namespace' => 'App\\Controllers',
-        'declaringClassName' => 'App\\Controllers\\AdminController',
-        'implementingClassName' => 'App\\Controllers\\AdminController',
-        'currentClassName' => 'App\\Controllers\\AdminController',
-        'aliasName' => NULL,
-      ),
-      'generateCsrfToken' => 
-      array (
-        'name' => 'generateCsrfToken',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 38,
-        'endLine' => 44,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 4,
-        'namespace' => 'App\\Controllers',
-        'declaringClassName' => 'App\\Controllers\\AdminController',
-        'implementingClassName' => 'App\\Controllers\\AdminController',
-        'currentClassName' => 'App\\Controllers\\AdminController',
-        'aliasName' => NULL,
-      ),
-      'verifyCsrfToken' => 
-      array (
-        'name' => 'verifyCsrfToken',
-        'parameters' => 
-        array (
-          'token' => 
-          array (
-            'name' => 'token',
-            'default' => NULL,
-            'type' => NULL,
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 46,
-            'endLine' => 46,
-            'startColumn' => 38,
-            'endColumn' => 43,
-            'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 46,
-        'endLine' => 49,
+        'docComment' => '/**
+ * Stocke un message flash dans la session.
+ *
+ * @param string $type success|error
+ * @param string $message Message à afficher
+ * @return void
+ */',
+        'startLine' => 42,
+        'endLine' => 45,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -226,13 +184,28 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 54,
-        'endLine' => 69,
+        'docComment' => '/**
+ * Affiche le tableau de bord administrateur avec :
+ * - nombre d\'utilisateurs
+ * - nombre d\'agences
+ * - nombre de trajets
+ *
+ * @return void
+ */',
+        'startLine' => 59,
+        'endLine' => 70,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -253,13 +226,157 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 74,
-        'endLine' => 80,
+        'docComment' => '/**
+ * Liste tous les utilisateurs.
+ *
+ * @return void
+ */',
+        'startLine' => 81,
+        'endLine' => 85,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Controllers',
+        'declaringClassName' => 'App\\Controllers\\AdminController',
+        'implementingClassName' => 'App\\Controllers\\AdminController',
+        'currentClassName' => 'App\\Controllers\\AdminController',
+        'aliasName' => NULL,
+      ),
+      'showUser' => 
+      array (
+        'name' => 'showUser',
+        'parameters' => 
+        array (
+          'id' => 
+          array (
+            'name' => 'id',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 93,
+            'endLine' => 93,
+            'startColumn' => 30,
+            'endColumn' => 36,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Affiche les détails d\'un utilisateur.
+ *
+ * @param int $id ID de l\'utilisateur
+ * @return void
+ */',
+        'startLine' => 93,
+        'endLine' => 104,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Controllers',
+        'declaringClassName' => 'App\\Controllers\\AdminController',
+        'implementingClassName' => 'App\\Controllers\\AdminController',
+        'currentClassName' => 'App\\Controllers\\AdminController',
+        'aliasName' => NULL,
+      ),
+      'updateUserRole' => 
+      array (
+        'name' => 'updateUserRole',
+        'parameters' => 
+        array (
+          'id' => 
+          array (
+            'name' => 'id',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 112,
+            'endLine' => 112,
+            'startColumn' => 36,
+            'endColumn' => 42,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Met à jour le rôle d\'un utilisateur.
+ *
+ * @param int $id ID de l\'utilisateur
+ * @return void
+ */',
+        'startLine' => 112,
+        'endLine' => 127,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -280,13 +397,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 85,
-        'endLine' => 91,
+        'docComment' => '/**
+ * Liste toutes les agences.
+ *
+ * @return void
+ */',
+        'startLine' => 138,
+        'endLine' => 142,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -307,13 +436,91 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 93,
-        'endLine' => 103,
+        'docComment' => '/**
+ * Crée une nouvelle agence.
+ *
+ * @return void
+ */',
+        'startLine' => 149,
+        'endLine' => 164,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Controllers',
+        'declaringClassName' => 'App\\Controllers\\AdminController',
+        'implementingClassName' => 'App\\Controllers\\AdminController',
+        'currentClassName' => 'App\\Controllers\\AdminController',
+        'aliasName' => NULL,
+      ),
+      'editAgencyForm' => 
+      array (
+        'name' => 'editAgencyForm',
+        'parameters' => 
+        array (
+          'id' => 
+          array (
+            'name' => 'id',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 172,
+            'endLine' => 172,
+            'startColumn' => 36,
+            'endColumn' => 42,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Affiche le formulaire d\'édition d\'une agence.
+ *
+ * @param int $id ID de l\'agence
+ * @return void
+ */',
+        'startLine' => 172,
+        'endLine' => 183,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -336,29 +543,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 105,
-            'endLine' => 105,
+            'startLine' => 191,
+            'endLine' => 191,
             'startColumn' => 34,
-            'endColumn' => 36,
+            'endColumn' => 40,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 105,
-        'endLine' => 115,
+        'docComment' => '/**
+ * Met à jour une agence existante.
+ *
+ * @param int $id ID de l\'agence
+ * @return void
+ */',
+        'startLine' => 191,
+        'endLine' => 206,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -381,29 +609,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 117,
-            'endLine' => 117,
+            'startLine' => 214,
+            'endLine' => 214,
             'startColumn' => 34,
-            'endColumn' => 36,
+            'endColumn' => 40,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 117,
-        'endLine' => 133,
+        'docComment' => '/**
+ * Supprime une agence.
+ *
+ * @param int $id ID de l\'agence
+ * @return void
+ */',
+        'startLine' => 214,
+        'endLine' => 221,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -424,13 +673,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 138,
-        'endLine' => 166,
+        'docComment' => '/**
+ * Liste tous les trajets.
+ *
+ * @return void
+ */',
+        'startLine' => 232,
+        'endLine' => 236,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -451,13 +712,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 171,
-        'endLine' => 180,
+        'docComment' => '/**
+ * Affiche le formulaire de création d\'un trajet.
+ *
+ * @return void
+ */',
+        'startLine' => 243,
+        'endLine' => 247,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -478,13 +751,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 182,
-        'endLine' => 213,
+        'docComment' => '/**
+ * Crée un nouveau trajet.
+ *
+ * @return void
+ */',
+        'startLine' => 254,
+        'endLine' => 297,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -507,29 +792,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 218,
-            'endLine' => 218,
+            'startLine' => 305,
+            'endLine' => 305,
             'startColumn' => 34,
-            'endColumn' => 36,
+            'endColumn' => 40,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 218,
-        'endLine' => 229,
+        'docComment' => '/**
+ * Affiche le formulaire d\'édition d\'un trajet.
+ *
+ * @param int $id ID du trajet
+ * @return void
+ */',
+        'startLine' => 305,
+        'endLine' => 321,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -552,29 +858,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 231,
-            'endLine' => 231,
+            'startLine' => 329,
+            'endLine' => 329,
             'startColumn' => 32,
-            'endColumn' => 34,
+            'endColumn' => 38,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 231,
-        'endLine' => 264,
+        'docComment' => '/**
+ * Met à jour un trajet existant.
+ *
+ * @param int $id ID du trajet
+ * @return void
+ */',
+        'startLine' => 329,
+        'endLine' => 371,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -597,110 +924,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'name' => 'id',
             'default' => NULL,
-            'type' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
             'isVariadic' => false,
             'byRef' => false,
             'isPromoted' => false,
             'attributes' => 
             array (
             ),
-            'startLine' => 269,
-            'endLine' => 269,
+            'startLine' => 379,
+            'endLine' => 379,
             'startColumn' => 32,
-            'endColumn' => 34,
+            'endColumn' => 38,
             'parameterIndex' => 0,
             'isOptional' => false,
           ),
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 269,
-        'endLine' => 277,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Controllers',
-        'declaringClassName' => 'App\\Controllers\\AdminController',
-        'implementingClassName' => 'App\\Controllers\\AdminController',
-        'currentClassName' => 'App\\Controllers\\AdminController',
-        'aliasName' => NULL,
-      ),
-      'exportTripsPDF' => 
-      array (
-        'name' => 'exportTripsPDF',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 282,
-        'endLine' => 314,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Controllers',
-        'declaringClassName' => 'App\\Controllers\\AdminController',
-        'implementingClassName' => 'App\\Controllers\\AdminController',
-        'currentClassName' => 'App\\Controllers\\AdminController',
-        'aliasName' => NULL,
-      ),
-      'exportTripsCSV' => 
-      array (
-        'name' => 'exportTripsCSV',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 319,
-        'endLine' => 368,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Controllers',
-        'declaringClassName' => 'App\\Controllers\\AdminController',
-        'implementingClassName' => 'App\\Controllers\\AdminController',
-        'currentClassName' => 'App\\Controllers\\AdminController',
-        'aliasName' => NULL,
-      ),
-      'exportTripsExcel' => 
-      array (
-        'name' => 'exportTripsExcel',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => NULL,
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 373,
-        'endLine' => 434,
+        'docComment' => '/**
+ * Supprime un trajet.
+ *
+ * @param int $id ID du trajet
+ * @return void
+ */',
+        'startLine' => 379,
+        'endLine' => 386,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
