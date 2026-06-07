@@ -1,18 +1,31 @@
 # --- DEPENDANCES COMPOSER ---
 /vendor/
 
+# --- NODE / FRONTEND ---
+/node_modules/
+/modules Node/
+
+# --- FICHIERS ENVIRONNEMENT ---
+.env
+.env.local
+.env.*.local
+
 # --- FICHIERS GENERES (EXPORTS) ---
-excel-styled.xlsx
+*.xlsx
+*.csv
+*.pdf
 export-excel.php
 export-styled.php
+excel-styled.xlsx
 
 # --- CAPTURES / VISUELS ---
 /visuels/
+/Capture d’écran/
 
 # --- LIVRABLES PERSONNELS ---
-*.pdf
 *.docx
-*.xlsx
+*.pptx
+*.zip
 
 # --- SYSTEME / OS ---
 .DS_Store
@@ -22,3 +35,10 @@ Thumbs.db
 /.vscode/
 /.idea/
 /nbproject/
+
+# --- LOGS ---
+*.log
+
+# --- BACKUPS ---
+/database/backups/
+/*.bak
