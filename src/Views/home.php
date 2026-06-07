@@ -50,12 +50,29 @@
                         </div>
 
                         <?php if (isset($_SESSION['user'])): ?>
+                            <!-- Bouton Infos -->
                             <button 
                                 class="btn btn-outline-primary w-100 mb-2" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#tripModal<?= $t['id'] ?>">
                                 Infos
                             </button>
+
+                            <!-- Boutons Modifier / Supprimer si conducteur -->
+                            <?php if ($_SESSION['user']['id'] == $t['driver_id']): ?>
+
+                                <a href="/trip/edit/<?= $t['id'] ?>" 
+                                   class="btn btn-warning w-100 mb-2">
+                                    Modifier
+                                </a>
+
+                                <a href="/trip/delete/<?= $t['id'] ?>" 
+                                   class="btn btn-danger w-100"
+                                   onclick="return confirm('Voulez-vous vraiment supprimer ce trajet ?');">
+                                    Supprimer
+                                </a>
+
+                            <?php endif; ?>
                         <?php endif; ?>
 
                         <a href="/trip/<?= $t['id'] ?>" class="btn btn-primary w-100 mt-3">

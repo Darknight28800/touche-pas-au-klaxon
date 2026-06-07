@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
     array (
-      0 => '66d2b67b8bafb1234d1044f22558c19daeeb59c1c944a39d735e03c89760529a',
+      0 => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
       1 => 
       array (
         0 => 'app\\models\\tripmodel',
@@ -44,6 +44,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         7 => 'app\\models\\delete',
         8 => 'app\\models\\countall',
         9 => 'app\\models\\getalltripspublic',
+        10 => 'app\\models\\getallforexport',
       ),
       3 => 
       array (

@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Controllers\AdminController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Controllers\AdminController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-75fcaea76d2181f2536df7090a774867f734b14a41efdaa6a49cfff5cb96c3ec',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
    'data' => 
   array (
     'locatedSource' => 
@@ -37,7 +37,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 20,
-    'endLine' => 387,
+    'endLine' => 295,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Controllers\\CoreController',
@@ -108,8 +108,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 42,
-            'endLine' => 42,
+            'startLine' => 38,
+            'endLine' => 38,
             'startColumn' => 28,
             'endColumn' => 39,
             'parameterIndex' => 0,
@@ -134,8 +134,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 42,
-            'endLine' => 42,
+            'startLine' => 38,
+            'endLine' => 38,
             'startColumn' => 42,
             'endColumn' => 56,
             'parameterIndex' => 1,
@@ -157,13 +157,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         ),
         'docComment' => '/**
  * Stocke un message flash dans la session.
- *
- * @param string $type success|error
- * @param string $message Message à afficher
- * @return void
  */',
-        'startLine' => 42,
-        'endLine' => 45,
+        'startLine' => 38,
+        'endLine' => 41,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -196,16 +192,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Affiche le tableau de bord administrateur avec :
- * - nombre d\'utilisateurs
- * - nombre d\'agences
- * - nombre de trajets
- *
- * @return void
- */',
-        'startLine' => 59,
-        'endLine' => 70,
+        'docComment' => NULL,
+        'startLine' => 47,
+        'endLine' => 58,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -238,13 +227,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Liste tous les utilisateurs.
- *
- * @return void
- */',
-        'startLine' => 81,
-        'endLine' => 85,
+        'docComment' => NULL,
+        'startLine' => 64,
+        'endLine' => 68,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -282,8 +267,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 93,
-            'endLine' => 93,
+            'startLine' => 70,
+            'endLine' => 70,
             'startColumn' => 30,
             'endColumn' => 36,
             'parameterIndex' => 0,
@@ -303,14 +288,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Affiche les détails d\'un utilisateur.
- *
- * @param int $id ID de l\'utilisateur
- * @return void
- */',
-        'startLine' => 93,
-        'endLine' => 104,
+        'docComment' => NULL,
+        'startLine' => 70,
+        'endLine' => 81,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -348,8 +328,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 112,
-            'endLine' => 112,
+            'startLine' => 83,
+            'endLine' => 83,
             'startColumn' => 36,
             'endColumn' => 42,
             'parameterIndex' => 0,
@@ -369,14 +349,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Met à jour le rôle d\'un utilisateur.
- *
- * @param int $id ID de l\'utilisateur
- * @return void
- */',
-        'startLine' => 112,
-        'endLine' => 127,
+        'docComment' => NULL,
+        'startLine' => 83,
+        'endLine' => 98,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -409,13 +384,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Liste toutes les agences.
- *
- * @return void
- */',
-        'startLine' => 138,
-        'endLine' => 142,
+        'docComment' => NULL,
+        'startLine' => 104,
+        'endLine' => 108,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -448,13 +419,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Crée une nouvelle agence.
- *
- * @return void
- */',
-        'startLine' => 149,
-        'endLine' => 164,
+        'docComment' => NULL,
+        'startLine' => 110,
+        'endLine' => 125,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -492,8 +459,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 172,
-            'endLine' => 172,
+            'startLine' => 127,
+            'endLine' => 127,
             'startColumn' => 36,
             'endColumn' => 42,
             'parameterIndex' => 0,
@@ -513,14 +480,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Affiche le formulaire d\'édition d\'une agence.
- *
- * @param int $id ID de l\'agence
- * @return void
- */',
-        'startLine' => 172,
-        'endLine' => 183,
+        'docComment' => NULL,
+        'startLine' => 127,
+        'endLine' => 138,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -558,8 +520,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 191,
-            'endLine' => 191,
+            'startLine' => 140,
+            'endLine' => 140,
             'startColumn' => 34,
             'endColumn' => 40,
             'parameterIndex' => 0,
@@ -579,14 +541,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Met à jour une agence existante.
- *
- * @param int $id ID de l\'agence
- * @return void
- */',
-        'startLine' => 191,
-        'endLine' => 206,
+        'docComment' => NULL,
+        'startLine' => 140,
+        'endLine' => 155,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -624,8 +581,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 214,
-            'endLine' => 214,
+            'startLine' => 157,
+            'endLine' => 157,
             'startColumn' => 34,
             'endColumn' => 40,
             'parameterIndex' => 0,
@@ -645,14 +602,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Supprime une agence.
- *
- * @param int $id ID de l\'agence
- * @return void
- */',
-        'startLine' => 214,
-        'endLine' => 221,
+        'docComment' => NULL,
+        'startLine' => 157,
+        'endLine' => 164,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -685,13 +637,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Liste tous les trajets.
- *
- * @return void
- */',
-        'startLine' => 232,
-        'endLine' => 236,
+        'docComment' => NULL,
+        'startLine' => 170,
+        'endLine' => 174,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -724,13 +672,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Affiche le formulaire de création d\'un trajet.
- *
- * @return void
- */',
-        'startLine' => 243,
-        'endLine' => 247,
+        'docComment' => NULL,
+        'startLine' => 176,
+        'endLine' => 180,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -763,13 +707,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Crée un nouveau trajet.
- *
- * @return void
- */',
-        'startLine' => 254,
-        'endLine' => 297,
+        'docComment' => NULL,
+        'startLine' => 182,
+        'endLine' => 224,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -807,8 +747,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 305,
-            'endLine' => 305,
+            'startLine' => 226,
+            'endLine' => 226,
             'startColumn' => 34,
             'endColumn' => 40,
             'parameterIndex' => 0,
@@ -828,14 +768,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Affiche le formulaire d\'édition d\'un trajet.
- *
- * @param int $id ID du trajet
- * @return void
- */',
-        'startLine' => 305,
-        'endLine' => 321,
+        'docComment' => NULL,
+        'startLine' => 226,
+        'endLine' => 242,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -873,8 +808,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 329,
-            'endLine' => 329,
+            'startLine' => 244,
+            'endLine' => 244,
             'startColumn' => 32,
             'endColumn' => 38,
             'parameterIndex' => 0,
@@ -894,14 +829,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Met à jour un trajet existant.
- *
- * @param int $id ID du trajet
- * @return void
- */',
-        'startLine' => 329,
-        'endLine' => 371,
+        'docComment' => NULL,
+        'startLine' => 244,
+        'endLine' => 285,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -939,8 +869,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 379,
-            'endLine' => 379,
+            'startLine' => 287,
+            'endLine' => 287,
             'startColumn' => 32,
             'endColumn' => 38,
             'parameterIndex' => 0,
@@ -960,14 +890,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Supprime un trajet.
- *
- * @param int $id ID du trajet
- * @return void
- */',
-        'startLine' => 379,
-        'endLine' => 386,
+        'docComment' => NULL,
+        'startLine' => 287,
+        'endLine' => 294,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

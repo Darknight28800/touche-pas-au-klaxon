@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "phpoffice/phpspreadsheet": "^5.7",
+        "phpoffice/phpspreadsheet": "^5.8",
         "altorouter/altorouter": "^2.0",
         "dompdf/dompdf": "^3.1"
     },

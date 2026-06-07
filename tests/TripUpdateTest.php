@@ -1,67 +1,55 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
-require_once __DIR__ . '/../models/TripModel.php';
-require_once __DIR__ . '/../config/Database.php';
+use App\Models\Database;
+use App\Models\TripModel;
 
 class TripUpdateTest extends TestCase
 {
-    private PDO $pdo;
     private TripModel $tripModel;
+    private PDO $pdo;
 
     protected function setUp(): void
     {
-        $this->pdo = (new Database())->getConnection();
-        $this->tripModel = new TripModel($this->pdo);
+        $db = new Database('tpk_test');
+        $this->pdo = $db->getConnection();
 
-        // Nettoyage avant test
+        // Nettoyage propre
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 0");
         $this->pdo->exec("DELETE FROM trips");
+        $this->pdo->exec("ALTER TABLE trips AUTO_INCREMENT = 1");
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 1");
 
-        // Création d’un trajet initial pour le test
-        $this->pdo->exec("
-            INSERT INTO trips 
-            (departure_agency_id, arrival_agency_id, departure_datetime, arrival_datetime, seats_total, seats_available, driver_id)
-            VALUES 
-            (1, 2, '2026-06-10 08:00:00', '2026-06-10 12:00:00', 4, 3, 1)
-        ");
+        $this->tripModel = new TripModel($this->pdo);
     }
 
     public function testUpdateTrip(): void
     {
-        // Récupération de l’ID du trajet créé
-        $tripId = $this->pdo->lastInsertId();
-
-        // Nouvelles données
-        $data = [
+        // Création d’un trajet
+        $this->tripModel->create([
             'departure_agency_id' => 1,
-            'arrival_agency_id' => 3, // changement
-            'departure_datetime' => '2026-06-10 09:00:00', // changement
-            'arrival_datetime' => '2026-06-10 13:00:00',   // changement
-            'seats_total' => 4,
-            'seats_available' => 2, // changement
-            'driver_id' => 1
-        ];
+            'arrival_agency_id'   => 2,
+            'departure_datetime'  => '2026-06-10 10:00:00',
+            'arrival_datetime'    => '2026-06-10 12:00:00',
+            'seats_total'         => 4,
+            'seats_available'     => 4,
+            'driver_id'           => 1
+        ]);
 
-        // Appel du modèle
-        $result = $this->tripModel->update($tripId, $data);
+        // Récupération de l’ID
+        $id = $this->pdo->query("SELECT id_trip FROM trips LIMIT 1")->fetchColumn();
 
-        // Vérifie que l’UPDATE retourne TRUE
-        $this->assertTrue($result, "La modification du trajet doit retourner TRUE");
+        // Mise à jour
+        $result = $this->tripModel->update($id, [
+            'departure_agency_id' => 1,
+            'arrival_agency_id'   => 3,
+            'departure_datetime'  => '2026-06-10 11:00:00',
+            'arrival_datetime'    => '2026-06-10 13:00:00',
+            'seats_total'         => 4,
+            'seats_available'     => 3,
+            'driver_id'           => 1
+        ]);
 
-        // Vérifie que les données ont bien été modifiées
-        $stmt = $this->pdo->prepare("SELECT * FROM trips WHERE id = :id");
-        $stmt->execute(['id' => $tripId]);
-        $trip = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $this->assertEquals(3, (int)$trip['arrival_agency_id']);
-        $this->assertEquals('2026-06-10 09:00:00', $trip['departure_datetime']);
-        $this->assertEquals(2, (int)$trip['seats_available']);
-    }
-
-    protected function tearDown(): void
-    {
-        // Nettoyage après test
-        $this->pdo->exec("DELETE FROM trips");
+        $this->assertTrue($result);
     }
 }

@@ -1,54 +1,54 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
-require_once __DIR__ . '/../models/TripModel.php';
-require_once __DIR__ . '/../config/Database.php';
+use App\Models\Database;
+use App\Models\TripModel;
 
 class TripDeleteTest extends TestCase
 {
-    private PDO $pdo;
     private TripModel $tripModel;
+    private PDO $pdo;
 
     protected function setUp(): void
     {
-        $this->pdo = (new Database())->getConnection();
-        $this->tripModel = new TripModel($this->pdo);
+        $db = new Database('tpk_test');
+        $this->pdo = $db->getConnection();
 
-        // Nettoyage avant test
+        // Nettoyage propre
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 0");
         $this->pdo->exec("DELETE FROM trips");
+        $this->pdo->exec("ALTER TABLE trips AUTO_INCREMENT = 1");
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 1");
 
-        // Création d’un trajet initial pour le test
-        $this->pdo->exec("
-            INSERT INTO trips 
-            (departure_agency_id, arrival_agency_id, departure_datetime, arrival_datetime, seats_total, seats_available, driver_id)
-            VALUES 
-            (1, 2, '2026-06-10 08:00:00', '2026-06-10 12:00:00', 4, 3, 1)
-        ");
+        $this->tripModel = new TripModel($this->pdo);
     }
 
     public function testDeleteTrip(): void
     {
-        // Récupération de l’ID du trajet créé
-        $tripId = $this->pdo->lastInsertId();
+        // Création d’un trajet
+        $this->tripModel->create([
+            'departure_agency_id' => 1,
+            'arrival_agency_id'   => 2,
+            'departure_datetime'  => '2026-06-10 10:00:00',
+            'arrival_datetime'    => '2026-06-10 12:00:00',
+            'seats_total'         => 4,
+            'seats_available'     => 4,
+            'driver_id'           => 1
+        ]);
 
-        // Appel du modèle
-        $result = $this->tripModel->delete($tripId);
+        // Récupération de l’ID
+        $id = $this->pdo->query("SELECT id_trip FROM trips LIMIT 1")->fetchColumn();
 
-        // Vérifie que la suppression retourne TRUE
-        $this->assertTrue($result, "La suppression du trajet doit retourner TRUE");
+        // Suppression
+        $result = $this->tripModel->delete($id);
 
-        // Vérifie que le trajet n'existe plus en base
-        $stmt = $this->pdo->prepare("SELECT * FROM trips WHERE id = :id");
-        $stmt->execute(['id' => $tripId]);
+        $this->assertTrue($result);
+
+        // Vérification
+        $stmt = $this->pdo->prepare("SELECT * FROM trips WHERE id_trip = :id");
+        $stmt->execute(['id' => $id]);
         $trip = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->assertEmpty($trip, "Le trajet ne doit plus exister après suppression");
-    }
-
-    protected function tearDown(): void
-    {
-        // Nettoyage après test
-        $this->pdo->exec("DELETE FROM trips");
+        $this->assertFalse($trip);
     }
 }

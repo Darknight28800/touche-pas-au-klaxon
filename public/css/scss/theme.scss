@@ -1,29 +1,161 @@
-/* ============================
-   THEME GLOBAL
-   ============================ */
+@use "../../../node_modules/bootstrap/scss/functions" as *;
+
+/* 2) Override AVANT import Bootstrap */
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: var(--success);
+$danger: var(--danger);
+$warning: var(--warning);
+$info: var(--info);
+
+$body-bg: var(--bg);
+$body-color: var(--text);
+
+$border-radius: var(--radius);
+$border-color: var(--border);
+
+$input-bg: var(--bg-input);
+$input-color: var(--text);
+$input-border-color: var(--border);
+$input-focus-border-color: var(--primary);
+$input-focus-box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25);
+
+$btn-border-radius: var(--radius);
+$btn-padding-y: .55rem;
+$btn-padding-x: 1.1rem;
+
+@use "../../../node_modules/bootstrap/scss/bootstrap" as *;
+
+/* ============================================
+   4) THEME GLOBAL
+   ============================================ */
 
 body {
-    background: var(--background);
-    color: var(--text);
-    font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  transition: background .25s ease, color .25s ease;
 }
 
-/* Cartes, sections, blocs */
-.bg-card {
+/* ============================================
+   5) CARDS
+   ============================================ */
+
+.card,
+.bg-card,
+.saas-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: var(--space-lg);
+  transition: background .25s ease, color .25s ease, border .25s ease;
+}
+
+/* ============================================
+   6) BOUTONS
+   ============================================ */
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+
+  &:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+/* ============================================
+   7) INPUTS / FORMULAIRES
+   ============================================ */
+
+.form-control {
+  background: var(--bg-input);
+  color: var(--text);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25);
+  }
+}
+
+/* ============================================
+   8) TABLES
+   ============================================ */
+
+.table {
+  color: var(--text);
+
+  thead {
     background: var(--bg-card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+  }
+
+  tbody tr {
+    transition: background .2s ease;
+
+    &:hover {
+      background: var(--gray-100);
+    }
+  }
 }
 
-/* Mode sombre */
-[data-theme="dark"] {
-    body {
-        background: var(--background);
-        color: var(--text);
-    }
+/* ============================================
+   9) ALERTS
+   ============================================ */
 
-    .bg-card {
-        background: var(--bg-card);
-        box-shadow: var(--shadow);
-    }
+.alert {
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+/* ============================================
+   10) BADGES
+   ============================================ */
+
+.badge {
+  padding: .45rem .7rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* ============================================
+   11) MODE SOMBRE
+   ============================================ */
+
+[data-theme="dark"] {
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .card,
+  .bg-card,
+  .saas-card {
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
+
+  .table tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+  }
+
+  .form-control {
+    background: var(--bg-input);
+    border-color: var(--border);
+  }
 }

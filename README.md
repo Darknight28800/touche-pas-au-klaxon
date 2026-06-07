@@ -1,271 +1,308 @@
-🚗 Touche Pas Au Klaxon — Plateforme de Covoiturage
-Application web MVC en PHP permettant de rechercher, filtrer et gérer des trajets de covoiturage.
-Projet réalisé dans le cadre de la formation Développeur Web — CEF.
+# 🚗 Touche Pas Au Klaxon — Application Web Fullstack
 
+Touche Pas Au Klaxon est une application web complète de gestion de trajets (type covoiturage interne).  
+Elle permet aux utilisateurs de consulter les trajets disponibles, réserver, gérer leurs trajets, et propose un espace d’administration complet pour gérer les agences, les utilisateurs et les trajets.
 
-📌 1. Fonctionnalités principales
+Le projet est construit en **PHP MVC**, avec un **frontend moderne**, un **design responsive**, un **thème clair/sombre**, et des **exports CSV / Excel / PDF**.
 
-  👤 Côté utilisateur
-    Consultation des trajets disponibles
+---
 
-    Recherche par départ, arrivée, date
+# 📚 Sommaire
 
-    Page détail d’un trajet
+- [Fonctionnalités](#-fonctionnalités)
+- [Technologies](#-technologies)
+- [Structure du projet](#-structure-du-projet)
+- [Installation](#-installation)
+- [Base de données](#-base-de-données)
+- [Routes principales](#-routes-principales)
+- [Espace Administrateur](#-espace-administrateur)
+- [Exports CSV / Excel / PDF](#-exports-csv--excel--pdf)
+- [Architecture SCSS](#-architecture-scss)
+- [Sécurité](#-sécurité)
+- [Captures d’écran](#-captures-décran)
+- [Livrables](#-livrables)
+- [Conclusion](#-conclusion)
 
-    Affichage du conducteur, horaires, places disponibles
+---
 
-    Mode sombre intégré
+# 🚀 Fonctionnalités
 
-    Interface moderne et responsive
+## 👥 Utilisateurs
+- Inscription / Connexion
+- Gestion de profil
+- Voir ses trajets réservés
+- Annuler un trajet
+- Interface responsive
 
+## 🚌 Trajets
+- Liste des trajets disponibles
+- Filtres : agence départ, arrivée, date
+- Pagination
+- Page détail d’un trajet
+- Réservation
+- Disponibilité dynamique
 
-  🛠️ Côté administrateur
-    Tableau de bord avec statistiques
+## 🏢 Agences
+- Liste complète
+- CRUD complet (admin)
 
-    Gestion des trajets (CRUD complet)
+## 🔐 Administration
+- Dashboard statistiques
+- Gestion utilisateurs (rôles, suppression)
+- Gestion agences
+- Gestion trajets
+- Exports CSV / Excel / PDF
+- Interface dédiée admin
 
-    Gestion des agences (CRUD complet)
+---
 
-    Gestion des utilisateurs
+# 🛠 Technologies
 
-    Export Excel (simple + stylé)
+### Backend
+- PHP 8+
+- Architecture MVC
+- AltoRouter
+- PDO (MySQL)
+- Dompdf (PDF)
+- PhpSpreadsheet (Excel)
+- Composer
 
-    Export PDF
+### Frontend
+- HTML5 / SCSS
+- Bootstrap 5 (custom theme)
+- Thème clair / sombre
+- Icônes Bootstrap Icons
 
-    Messages flash
+### Base de données
+- MySQL / MariaDB
 
-    Sécurisation par rôle (admin / user)
+---
 
+# 📂 Structure du projet
 
-🧱 2. Architecture du projet (MVC)
+```
+/src
+  /Controllers
+    AdminController.php
+    AuthController.php
+    TripController.php
+    ...
+  /Models
+    UserModel.php
+    TripModel.php
+    AgencyModel.php
+  /Views
+    /_partials
+      header.php
+      footer.php
+      header_admin.php
+      footer_admin.php
+      navbar_admin.php
+    /admin
+      dashboard.php
+      trips.php
+      trips_edit.php
+      agencies.php
+      users.php
+    /auth
+    /public
+      home.php
+      trips.php
 
-TOUCHE-PAS-AU-KLAXON/
-│
-├── config/                 # Configuration générale
-├── database/               # Scripts SQL (create + seed)
-├── jeu-d-essais/           # Données de test
-│
-├── public/                 # Point d'entrée du site
-│   ├── css/style.css
-│   ├── index.php
-│   └── .htaccess
-│
-├── src/
-│   ├── Config/             # Connexion DB
-│   ├── Controllers/        # Logique métier
-│   ├── Core/               # Auth, classes internes
-│   ├── Models/             # Requêtes SQL
-│   ├── Router/altorouter/  # Router
-│   └── Views/              # Templates PHP
-│
-├── tests/                  # Tests PHPUnit
-│
-├── vendor/                 # Dépendances Composer
-│
-├── visuels/                # Screenshots pour la soutenance
-│
-├── export-excel.php        # Export Excel
-├── export-styled.php       # Export Excel stylé
-├── excel-styled.xlsx
-│
-├── README.md
-├── composer.json
-└── TPK_PDF_Final.pdf
+/public
+  index.php
+  /assets
+    /css
+    /js
+    /img
 
+/config
+  database.php
 
-🗄️ 3. Base de données
-📘 Tables principales
-users
+composer.json
 
-agencies
+```
 
-trips
+---
 
-📄 Scripts fournis
-database/create.sql
+# ⚙ Installation
 
-database/seed.sql
+## 1️⃣ Cloner le projet
 
-🧪 Jeu d’essais
-jeu-d-essais/agences.txt
-
-jeu-d-essais/users.txt
-
-📊 MCD / MPD / MLD
-Les fichiers sont disponibles dans le dossier /database/mcd_mld/.
-
-
-🚀 4. Installation du projet
-1️⃣ Cloner le projet
-
-git clone https://github.com/Darknight28800/touche-pas-au-klaxon.git
+```
+git clone <url-du-repo>
 cd touche-pas-au-klaxon
 
-2️⃣ Installer les dépendances
+```
 
+## 2️⃣ Installer les dépendances PHP
+
+```
 composer install
 
-3️⃣ Configurer la base de données
+```
 
-Créer un fichier config/database.php :
+## 3️⃣ Configurer l’environnement
 
-return [
-    'host' => 'localhost',
-    'dbname' => 'tpk',
-    'user' => 'root',
-    'password' => ''
-];
+Créer un fichier `.env` :
 
-4️⃣ Importer la base
+```
+DB_HOST=localhost
+DB_NAME=tpak
+DB_USER=root
+DB_PASSWORD=
 
-Importer dans cet ordre :
+```
 
-database/create.sql
+## 4️⃣ Importer la base de données
 
-database/seed.sql
+Importer le fichier SQL fourni :
 
+```
+/database/tpak.sql
 
-5️⃣ Lancer le serveur PHP
+```
 
+## 5️⃣ Lancer le serveur PHP
+
+```
 php -S localhost:8000 -t public
 
-Puis accéder à :
-👉 http://localhost:8000
+```
 
+---
 
-🔑 5. Identifiants de test
-👑 Administrateur
-Code
-email : admin@tpk.com
-mdp   : admin123
+# 🗄 Base de données
 
-👤 Utilisateur
-Code
-email : user@tpk.com
-mdp   : user123
+Tables principales :
 
+- `users`
+- `agencies`
+- `trips`
+- `reservations`
 
-🎨 6. Design & UX
-Thème moderne type SaaS
+Relations :
 
-Mode sombre complet
+- 1 agence → plusieurs trajets
+- 1 utilisateur → plusieurs trajets (conducteur)
+- 1 utilisateur → plusieurs réservations
 
-Cards animées
+---
 
-Navigation claire
+# 🌐 Routes principales
 
-Responsive mobile
+## Public
+|     Route     |     Description     |
+|---------------|---------------------|
+| `/`           |   Page d’accueil    |
+| `/trips`      | Liste des trajets   |
+| `/trip/{id}`  | Détail d’un trajet  |
+| `/login`      |     Connexion       |
+| `/register`   |    Inscription      |
 
-Style.css optimisé
+## Admin
+|       Route       |       Description       |
+|-------------------|-------------------------|
+| `/admin`          |       Dashboard         |
+| `/admin/trips`    |     Gestion trajets     |
+| `/admin/agencies` |     Gestion agences     |
+| `/admin/users`    |   Gestion utilisateurs  |
 
-Palette de couleurs imposée par le brief (Bootstrap variables)
+---
 
+# 🛡 Espace Administrateur
 
-🔐 7. Sécurité
-Authentification utilisateur
+Fonctionnalités :
 
-Rôle admin / user
+- Dashboard statistiques
+- CRUD utilisateurs
+- CRUD agences
+- CRUD trajets
+- Exports CSV / Excel / PDF
+- Sécurisé par rôle `admin`
 
-Protection des pages admin
+---
 
-Requêtes SQL préparées (PDO)
+# 📤 Exports CSV / Excel / PDF
 
-Validation des formulaires
+## CSV
+- Généré via `fputcsv()`
+- Encodage UTF‑8 BOM compatible Excel
 
-Messages flash sécurisés
+## Excel
+- Généré via PhpSpreadsheet
+- Colonnes auto‑dimensionnées
+- Format `.xlsx`
 
-Vérification des permissions
+## PDF
+- Généré via Dompdf
+- Format A4 paysage
+- Table responsive
 
+---
 
-📤 8. Exports
+# 🎨 Architecture SCSS
 
-📄 Export PDF
-Liste des trajets
+```
+/scss
+  /base
+  /components
+  /layout
+  /themes
+  variables.scss
+  mixins.scss
+  main.scss
 
-Mise en page propre
+```
 
-Généré via Dompdf
+- Thème clair / sombre
+- Variables CSS mappées sur Bootstrap
+- Design moderne et cohérent
 
-📊 Export Excel
-Version simple
+---
 
-Version stylée (couleurs, bordures, auto-size)
+# 🔒 Sécurité
 
-Généré via PhpSpreadsheet
+- Sessions sécurisées
+- Vérification rôle admin
+- Validation des formulaires
+- Protection contre :
+- injections SQL (PDO préparé)
+- XSS (htmlspecialchars)
+- accès non autorisés
 
+---
 
-🧪 9. Tests réalisés (PHPUnit)
-Le projet inclut des tests unitaires couvrant toutes les opérations d’écriture, comme exigé par le brief :
+# 📸 Captures d’écran
 
-✔️ Trajets
-Création
+*(À insérer selon ton PDF CEF)*
 
-Modification
+- Home  
+- Liste trajets  
+- Page trajet  
+- Dashboard admin  
+- CRUD trajets  
+- Exports  
 
-Suppression
+---
 
-Tests du modèle TripModel
+# 📦 Livrables
 
-✔️ Agences
-Création
+- Code source complet
+- Base de données
+- README.md
+- Captures d’écran
+- PDF explicatif 
 
-Modification
+---
 
-Suppression
+# 🏁 Conclusion
 
-▶️ Lancer les tests
+Touche Pas Au Klaxon est une application web complète, robuste et professionnelle, respectant l’ensemble du brief :
 
-vendor/bin/phpunit --configuration phpunit.xml
-
-🧹 10. Qualité du code (PHPStan)
-Analyse statique du code :
-
-
-vendor/bin/phpstan analyse
-Niveau configuré : max (ou celui que tu utilises).
-
-🖼️ 11. Captures d’écran
-Les captures sont disponibles dans le dossier :
-📁 /visuels/
-
-Elles montrent :
-
-Accueil utilisateur
-
-Liste des trajets
-
-Détail d’un trajet
-
-Interface admin
-
-Dashboard
-
-Messages flash
-
-Mode sombre
-
-Responsive mobile
-
-🏁 12. Conclusion
-Le projet Touche Pas Au Klaxon répond à l’ensemble des exigences du brief :
-
-Architecture MVC propre
-
-Fonctionnalités complètes
-
-Interface moderne et responsive
-
-Espace administrateur sécurisé
-
-Exports professionnels (PDF + Excel)
-
-Tests unitaires conformes
-
-Code clair, organisé et documenté
-
-Projet finalisé et prêt pour la soutenance.
-
-👤 Auteur
-David ANTOINA  
-Développeur Web — Formation CEF
-2026
+- Architecture MVC propre  
+- Interface moderne  
+- Admin complet  
+- Exports professionnels  
+- Sécurité renforcée  
+- Code maintenable et structuré  

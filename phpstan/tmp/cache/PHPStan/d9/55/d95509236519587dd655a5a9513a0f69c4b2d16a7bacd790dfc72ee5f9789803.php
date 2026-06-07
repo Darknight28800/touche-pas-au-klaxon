@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
     array (
-      0 => '75fcaea76d2181f2536df7090a774867f734b14a41efdaa6a49cfff5cb96c3ec',
+      0 => '61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
       1 => 
       array (
         0 => 'app\\controllers\\admincontroller',
@@ -56,7 +56,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\ExportController.php' => 
     array (
-      0 => 'e04871b70ba7abd95a903ade2599d8975a16233da29b04f1353983b49a70b9b9',
+      0 => '7081140935a85988759b0499b2cddee9cc86e454c4490760ece45071445042c6',
       1 => 
       array (
         0 => 'app\\controllers\\exportcontroller',
@@ -148,7 +148,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
     array (
-      0 => '66d2b67b8bafb1234d1044f22558c19daeeb59c1c944a39d735e03c89760529a',
+      0 => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
       1 => 
       array (
         0 => 'app\\models\\tripmodel',
@@ -165,6 +165,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         7 => 'app\\models\\delete',
         8 => 'app\\models\\countall',
         9 => 'app\\models\\getalltripspublic',
+        10 => 'app\\models\\getallforexport',
       ),
       3 => 
       array (

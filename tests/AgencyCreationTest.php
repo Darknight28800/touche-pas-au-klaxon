@@ -19,8 +19,12 @@ class AgencyCreationTest extends TestCase
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // On vide la table avant chaque test
-        $this->pdo->exec("TRUNCATE TABLE agencies");
+        // On vide proprement les tables liées
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 0");
+        $this->pdo->exec("DELETE FROM trips");
+        $this->pdo->exec("DELETE FROM agencies");
+        $this->pdo->exec("ALTER TABLE agencies AUTO_INCREMENT = 1");
+        $this->pdo->exec("SET FOREIGN_KEY_CHECKS = 1");
 
         // On injecte la connexion dans le modèle
         $this->agencyModel = new AgencyModel($this->pdo);

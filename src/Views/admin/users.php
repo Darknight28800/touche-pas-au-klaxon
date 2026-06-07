@@ -2,50 +2,93 @@
 /** @var array $users */
 ?>
 
-<?php require __DIR__ . '/../_partials/header.php'; ?>
+<?php require __DIR__ . '/../_partials/header_admin.php'; ?>
 
-<div class="container mt-4">
+<div class="container py-5">
 
-    <h1 class="fw-bold mb-4">Utilisateurs</h1>
+    <h1 class="fw-bold mb-4" style="color:#111827;">Utilisateurs</h1>
 
-    <div class="saas-card">
-        <div class="table-responsive">
-            <table class="table table-dark table-striped align-middle">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Email</th>
-                        <th>Rôle</th>
-                        <th class="text-end">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($users as $u): ?>
+    <!-- Messages flash -->
+    <?php if (!empty($_SESSION['success'])): ?>
+        <div class="alert alert-success shadow-sm"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
+    <?php endif; ?>
+
+    <?php if (!empty($_SESSION['error'])): ?>
+        <div class="alert alert-danger shadow-sm"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+    <?php endif; ?>
+
+    <div class="saas-card p-4">
+
+        <h5 class="fw-semibold mb-3">Liste des utilisateurs</h5>
+
+        <?php if (empty($users)): ?>
+            <div class="alert alert-info shadow-sm">Aucun utilisateur enregistré.</div>
+        <?php else: ?>
+
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead class="table-light">
                         <tr>
-                            <td><?= $u['id'] ?></td>
-                            <td><?= htmlspecialchars($u['lastname']) ?></td>
-                            <td><?= htmlspecialchars($u['firstname']) ?></td>
-                            <td><?= htmlspecialchars($u['email']) ?></td>
-                            <td><?= htmlspecialchars($u['role']) ?></td>
-                            <td class="text-end">
-                                <a href="/admin/users/<?= $u['id'] ?>" class="btn btn-sm btn-primary">
-                                    Détails / Rôle
-                                </a>
-                            </td>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                            <th>Rôle</th>
+                            <th class="text-end" width="180">Actions</th>
                         </tr>
-                    <?php endforeach; ?>
-                    <?php if (empty($users)): ?>
-                        <tr>
-                            <td colspan="6" class="text-center text-muted">Aucun utilisateur.</td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+
+                    <tbody>
+                        <?php foreach ($users as $u): ?>
+                            <tr>
+                                <td><?= $u['id'] ?></td>
+
+                                <td>
+                                    <?= htmlspecialchars($u['firstname']) ?>
+                                    <?= htmlspecialchars($u['lastname']) ?>
+                                </td>
+
+                                <td><?= htmlspecialchars($u['email']) ?></td>
+
+                                <td><?= htmlspecialchars($u['phone'] ?? 'Non renseigné') ?></td>
+
+                                <td>
+                                    <?php if ($u['role'] === 'admin'): ?>
+                                        <span class="badge bg-danger">Admin</span>
+                                    <?php else: ?>
+                                        <span class="badge bg-primary">Utilisateur</span>
+                                    <?php endif; ?>
+                                </td>
+
+                                <td class="text-end">
+
+                                    <!-- Bouton détails -->
+                                    <a href="/admin/users/<?= $u['id'] ?>" 
+                                       class="btn btn-outline-secondary btn-sm me-1">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+
+                                    <!-- Bouton supprimer (interdit pour admin) -->
+                                    <?php if ($u['role'] !== 'admin'): ?>
+                                        <a href="/admin/user/delete/<?= $u['id'] ?>"
+                                           class="btn btn-outline-danger btn-sm"
+                                           onclick="return confirm('Supprimer cet utilisateur ?');">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    <?php endif; ?>
+
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+
+                </table>
+            </div>
+
+        <?php endif; ?>
+
     </div>
 
 </div>
 
-<?php require __DIR__ . '/../_partials/footer.php'; ?>
+<?php require __DIR__ . '/../_partials/footer_admin.php'; ?>

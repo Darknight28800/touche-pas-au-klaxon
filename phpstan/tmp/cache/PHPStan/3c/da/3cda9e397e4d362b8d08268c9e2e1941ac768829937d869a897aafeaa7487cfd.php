@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Controllers\ExportController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Controllers\ExportController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-e04871b70ba7abd95a903ade2599d8975a16233da29b04f1353983b49a70b9b9',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-7081140935a85988759b0499b2cddee9cc86e454c4490760ece45071445042c6',
    'data' => 
   array (
     'locatedSource' => 
@@ -22,15 +22,19 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'isEnum' => false,
     'isBackedEnum' => false,
     'modifiers' => 0,
-    'docComment' => NULL,
+    'docComment' => '/**
+ * Class ExportController
+ *
+ * Gère l\'export Excel des trajets pour l\'administration.
+ */',
     'attributes' => 
     array (
     ),
-    'startLine' => 9,
-    'endLine' => 40,
+    'startLine' => 14,
+    'endLine' => 73,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => NULL,
+    'parentClassName' => 'App\\Controllers\\CoreController',
     'implementsClassNames' => 
     array (
     ),
@@ -52,13 +56,25 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'returnsReference' => false,
-        'returnType' => NULL,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 11,
-        'endLine' => 39,
+        'docComment' => '/**
+ * Export des trajets au format Excel.
+ *
+ * @return void
+ */',
+        'startLine' => 21,
+        'endLine' => 72,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

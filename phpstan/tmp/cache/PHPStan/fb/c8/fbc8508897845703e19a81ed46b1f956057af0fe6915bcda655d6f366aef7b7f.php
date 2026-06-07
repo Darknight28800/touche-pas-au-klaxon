@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Models\TripModel.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\TripModel
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-66d2b67b8bafb1234d1044f22558c19daeeb59c1c944a39d735e03c89760529a',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 7,
-    'endLine' => 252,
+    'endLine' => 275,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Models\\Database',
@@ -673,6 +673,43 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => NULL,
         'startLine' => 229,
         'endLine' => 250,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\TripModel',
+        'implementingClassName' => 'App\\Models\\TripModel',
+        'currentClassName' => 'App\\Models\\TripModel',
+        'aliasName' => NULL,
+      ),
+      'getAllForExport' => 
+      array (
+        'name' => 'getAllForExport',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'array',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Export Excel — conforme au brief
+ */',
+        'startLine' => 255,
+        'endLine' => 274,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

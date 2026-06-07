@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1780749682,
+	'lastFullAnalysisTime' => 1780750955,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.2.1',
@@ -10,7 +10,7 @@ return [
   array (
   ),
   'phpVersion' => 80212,
-  'projectConfig' => '{parameters: {level: 1, paths: [C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers, C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models, C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src], tmpDir: C:\\xampp\\htdocs\\touche-pas-au-klaxon\\phpstan\\tmp}}',
+  'projectConfig' => '{parameters: {level: 2, paths: [C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers, C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models, C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src], tmpDir: C:\\xampp\\htdocs\\touche-pas-au-klaxon\\phpstan\\tmp}}',
   'analysedPaths' => 
   array (
     0 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers',
@@ -578,7 +578,7 @@ return [
   'stubFiles' => 
   array (
   ),
-  'level' => '1',
+  'level' => '2',
 ),
 	'projectExtensionFiles' => array (
 ),
@@ -595,7 +595,7 @@ return [
 	'dependencies' => array (
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
   array (
-    'fileHash' => '75fcaea76d2181f2536df7090a774867f734b14a41efdaa6a49cfff5cb96c3ec',
+    'fileHash' => '61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
     'dependentFiles' => 
     array (
     ),
@@ -622,13 +622,14 @@ return [
       0 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php',
       1 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AgencyController.php',
       2 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AuthController.php',
-      3 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\HomeController.php',
-      4 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\TripController.php',
+      3 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\ExportController.php',
+      4 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\HomeController.php',
+      5 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\TripController.php',
     ),
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\ExportController.php' => 
   array (
-    'fileHash' => 'e04871b70ba7abd95a903ade2599d8975a16233da29b04f1353983b49a70b9b9',
+    'fileHash' => '7081140935a85988759b0499b2cddee9cc86e454c4490760ece45071445042c6',
     'dependentFiles' => 
     array (
     ),
@@ -668,7 +669,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
   array (
-    'fileHash' => '66d2b67b8bafb1234d1044f22558c19daeeb59c1c944a39d735e03c89760529a',
+    'fileHash' => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
     'dependentFiles' => 
     array (
       0 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php',
@@ -973,27 +974,7 @@ return [
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'dashboard',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Affiche le tableau de bord administrateur avec :
-     * - nombre d\'utilisateurs
-     * - nombre d\'agences
-     * - nombre de trajets
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1011,24 +992,7 @@ return [
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'users',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Liste tous les utilisateurs.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1046,25 +1010,7 @@ return [
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'showUser',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Affiche les détails d\'un utilisateur.
-     *
-     * @param int $id ID de l\'utilisateur
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1095,25 +1041,7 @@ return [
         4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'updateUserRole',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Met à jour le rôle d\'un utilisateur.
-     *
-     * @param int $id ID de l\'utilisateur
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1144,24 +1072,7 @@ return [
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'agencies',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Liste toutes les agences.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1179,24 +1090,7 @@ return [
         6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createAgency',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Crée une nouvelle agence.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1214,25 +1108,7 @@ return [
         7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'editAgencyForm',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Affiche le formulaire d\'édition d\'une agence.
-     *
-     * @param int $id ID de l\'agence
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1263,25 +1139,7 @@ return [
         8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'updateAgency',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Met à jour une agence existante.
-     *
-     * @param int $id ID de l\'agence
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1312,25 +1170,7 @@ return [
         9 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'deleteAgency',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Supprime une agence.
-     *
-     * @param int $id ID de l\'agence
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1361,24 +1201,7 @@ return [
         10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'trips',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Liste tous les trajets.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1396,24 +1219,7 @@ return [
         11 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createTripForm',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Affiche le formulaire de création d\'un trajet.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1431,24 +1237,7 @@ return [
         12 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createTrip',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Crée un nouveau trajet.
-     *
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1466,25 +1255,7 @@ return [
         13 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'editTripForm',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Affiche le formulaire d\'édition d\'un trajet.
-     *
-     * @param int $id ID du trajet
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1515,25 +1286,7 @@ return [
         14 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'updateTrip',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Met à jour un trajet existant.
-     *
-     * @param int $id ID du trajet
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1564,25 +1317,7 @@ return [
         15 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'deleteTrip',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Supprime un trajet.
-     *
-     * @param int $id ID du trajet
-     * @return void
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1992,10 +1727,27 @@ return [
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Controllers\\ExportController',
-       'phpDoc' => NULL,
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Class ExportController
+ *
+ * Gère l\'export Excel des trajets pour l\'administration.
+ */',
+         'namespace' => 'App\\Controllers',
+         'uses' => 
+        array (
+          'tripmodel' => 'App\\Models\\TripModel',
+          'spreadsheet' => 'PhpOffice\\PhpSpreadsheet\\Spreadsheet',
+          'xlsx' => 'PhpOffice\\PhpSpreadsheet\\Writer\\Xlsx',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
        'abstract' => false,
        'final' => false,
-       'extends' => NULL,
+       'extends' => 'App\\Controllers\\CoreController',
        'implements' => 
       array (
       ),
@@ -2010,14 +1762,31 @@ return [
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'exportTrips',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Export des trajets au format Excel.
+     *
+     * @return void
+     */',
+             'namespace' => 'App\\Controllers',
+             'uses' => 
+            array (
+              'tripmodel' => 'App\\Models\\TripModel',
+              'spreadsheet' => 'PhpOffice\\PhpSpreadsheet\\Spreadsheet',
+              'xlsx' => 'PhpOffice\\PhpSpreadsheet\\Writer\\Xlsx',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -3257,6 +3026,37 @@ return [
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getAllTripsPublic',
            'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getAllForExport',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Export Excel — conforme au brief
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
