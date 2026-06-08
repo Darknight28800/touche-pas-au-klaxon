@@ -45,7 +45,8 @@
             <div class="alert alert-info shadow-sm">Aucun trajet enregistré.</div>
         <?php else: ?>
 
-            <div class="table-responsive">
+            <!-- AJOUT ICI -->
+            <div class="admin-table table-responsive">
                 <table class="table align-middle mb-0">
                     <thead class="table-light">
                         <tr>
@@ -86,13 +87,11 @@
 
                                 <td class="text-end">
 
-                                    <!-- Modifier -->
                                     <a href="/admin/trips/<?= $t['id'] ?>/edit"
                                        class="btn btn-outline-secondary btn-sm me-1">
                                         <i class="bi bi-pencil"></i>
                                     </a>
 
-                                    <!-- Supprimer -->
                                     <form action="/admin/trips/<?= $t['id'] ?>/delete"
                                           method="POST"
                                           class="d-inline"

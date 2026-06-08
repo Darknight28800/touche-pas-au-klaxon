@@ -2,7 +2,7 @@
 
 // osfsl-C:/xampp/htdocs/touche-pas-au-klaxon/vendor/composer/../dompdf/dompdf/src/Options.php-presentSymbols
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-df2c160cd437634360551348a6bf91cdffb28451b3294b6232eeda04f45fd146-8.2.31',
+   'variableKey' => 'v2-df2c160cd437634360551348a6bf91cdffb28451b3294b6232eeda04f45fd146-8.2.12',
    'data' => 
   array (
     'classes' => 

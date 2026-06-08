@@ -65,4 +65,14 @@ class UserModel extends Database
             'id'   => $id,
         ]);
     }
+
+    /**
+     * Suppression d'un utilisateur (admin)
+    */
+    public function delete(int $id): bool
+    {
+        $stmt = $this->db->prepare("DELETE FROM users WHERE id = :id");
+        return $stmt->execute(['id' => $id]);
+    }
+
 }

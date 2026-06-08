@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1780750955,
+	'lastFullAnalysisTime' => 1780835400,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.2.1',
@@ -22,7 +22,7 @@ return [
   ),
   'composerLocks' => 
   array (
-    'C:/xampp/htdocs/touche-pas-au-klaxon/composer.lock' => 'c569dba8a648c71b35d5475a083336a6c0c2a922538e11acbde7fc4e3dd0451d',
+    'C:/xampp/htdocs/touche-pas-au-klaxon/composer.lock' => '744a38c57d2b2bbde2bb2b6eb90093cd16e5561bd22a52529c4ae37028596b3f',
   ),
   'composerInstalled' => 
   array (
@@ -188,9 +188,9 @@ return [
         ),
         'phpoffice/phpspreadsheet' => 
         array (
-          'pretty_version' => '5.7.0',
-          'version' => '5.7.0.0',
-          'reference' => '9f55d3b9b7bcb1084fda8340e4b7ce4ed10cd0c8',
+          'pretty_version' => '5.8.0',
+          'version' => '5.8.0.0',
+          'reference' => '01964d92536edf1a3a874b9580a52824bebf6fbb',
           'type' => 'library',
           'install_path' => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\vendor\\composer/../phpoffice/phpspreadsheet',
           'aliases' => 
@@ -595,7 +595,7 @@ return [
 	'dependencies' => array (
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
   array (
-    'fileHash' => '61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
+    'fileHash' => '6c8b88d305b45fa5cb3e09d1a01baa9d3f37d2a76804422001c8df274cb8197b',
     'dependentFiles' => 
     array (
     ),
@@ -669,7 +669,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
   array (
-    'fileHash' => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
+    'fileHash' => 'f4e082ada02d50e33b1b55b0f0c9ca31a9cac91bb02605c97b4db0ca9d667ea9',
     'dependentFiles' => 
     array (
       0 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php',
@@ -680,7 +680,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\UserModel.php' => 
   array (
-    'fileHash' => '687e591d73cd51c2f13c3d8e04cef9299861810de7a129ce61c2aecc07c5aa99',
+    'fileHash' => '0eec4643d2ab33f9c0a7cd53d3c9fd4cb56973383a9d21cb5e668c9574a3c78e',
     'dependentFiles' => 
     array (
       0 => 'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php',
@@ -718,9 +718,23 @@ return [
     array (
     ),
   ),
+  'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\_partials\\footer_admin.php' => 
+  array (
+    'fileHash' => '464bf417a44b90a9d03ab1765fcf68e2e451f9b6a66d3df0a802c200f1b0d53b',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\_partials\\header.php' => 
   array (
     'fileHash' => 'b4a6a1e4e45f0bc1c9d73dd8953a8065ba3cb2491e20a919f5feab2a79315279',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\_partials\\header_admin.php' => 
+  array (
+    'fileHash' => 'fd57c47d24a8dfb3167a16081abbb482cb18f08796151dcc7137cb3a1625d705',
     'dependentFiles' => 
     array (
     ),
@@ -734,7 +748,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\agencies.php' => 
   array (
-    'fileHash' => 'd072f3345b9d9d304ef42becc3a1a476065b3081bfca9f5fd9ab1faa529f600f',
+    'fileHash' => '790e8189b4a70732ae868cb066d4d8be19fbf73daeaae5fe7f454cc60d06bcd9',
     'dependentFiles' => 
     array (
     ),
@@ -748,21 +762,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\dashboard.php' => 
   array (
-    'fileHash' => '5c5ba2a01b9bcca2e4a081a8c623717c0886ce73736fc211b54db70e9268b590',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
-  'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\partials\\footer_admin.php' => 
-  array (
-    'fileHash' => '464bf417a44b90a9d03ab1765fcf68e2e451f9b6a66d3df0a802c200f1b0d53b',
-    'dependentFiles' => 
-    array (
-    ),
-  ),
-  'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\partials\\header_admin.php' => 
-  array (
-    'fileHash' => '7b04a79482110d43cec2e457a56f4f5559e84d5e0028cf97b6784ce2277e5de1',
+    'fileHash' => '83712c15d3a887e0c30a5c010baa191d386faf47ce12972e62d0862350c7443b',
     'dependentFiles' => 
     array (
     ),
@@ -776,7 +776,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\trips.php' => 
   array (
-    'fileHash' => '9a694cd88b33baa3c5bef460982884287d051487b5ec5790183fc6121573f44c',
+    'fileHash' => '470320275c669864d2d21fb8ac9709298080f66f43a509b4ea90a6c61e4e6e7f',
     'dependentFiles' => 
     array (
     ),
@@ -804,14 +804,14 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\users.php' => 
   array (
-    'fileHash' => '16714d05878a6cf48435a6ff69c17b87903101ae5dd214f626c76f8d03c0b910',
+    'fileHash' => 'ffe9c19b60e15c9a711fe18d00376c0904812bf42a93318476e0e4839fd7c920',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\users_show.php' => 
   array (
-    'fileHash' => 'cd0014670cfd61fcaf4ce13a4ef070df7d95218491957c401b07ea17f84bb2f5',
+    'fileHash' => '202231212754bb633b379362eeaff0ac2318eef083184b1a104d34e7c7907424',
     'dependentFiles' => 
     array (
     ),
@@ -832,7 +832,7 @@ return [
   ),
   'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\home.php' => 
   array (
-    'fileHash' => 'fbe5d10fb8169fc534e004cfb05cc8725dfa9c5196431dd5a918a5a079f2e841',
+    'fileHash' => 'eaa6b3f46f7ac136ffe09f8507341ba7f1a16dda76cab73f99ff243c56b982ea',
     'dependentFiles' => 
     array (
     ),
@@ -900,30 +900,7 @@ return [
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Controllers\\AdminController',
-       'phpDoc' => 
-      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-         'phpDocString' => '/**
- * Class AdminController
- *
- * Gère l\'ensemble des fonctionnalités administrateur :
- * - tableau de bord
- * - gestion des utilisateurs
- * - gestion des agences
- * - gestion des trajets
- *
- * Toutes les actions nécessitent un rôle administrateur.
- */',
-         'namespace' => 'App\\Controllers',
-         'uses' => 
-        array (
-          'usermodel' => 'App\\Models\\UserModel',
-          'agencymodel' => 'App\\Models\\AgencyModel',
-          'tripmodel' => 'App\\Models\\TripModel',
-        ),
-         'constUses' => 
-        array (
-        ),
-      )),
+       'phpDoc' => NULL,
        'abstract' => false,
        'final' => false,
        'extends' => 'App\\Controllers\\CoreController',
@@ -941,22 +918,7 @@ return [
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => '__construct',
-           'phpDoc' => 
-          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
-             'phpDocString' => '/**
-     * Constructeur : vérifie que l\'utilisateur est administrateur.
-     */',
-             'namespace' => 'App\\Controllers',
-             'uses' => 
-            array (
-              'usermodel' => 'App\\Models\\UserModel',
-              'agencymodel' => 'App\\Models\\AgencyModel',
-              'tripmodel' => 'App\\Models\\TripModel',
-            ),
-             'constUses' => 
-            array (
-            ),
-          )),
+           'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -1071,6 +1033,37 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'deleteUser',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'agencies',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -1087,7 +1080,7 @@ return [
           array (
           ),
         )),
-        6 => 
+        7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createAgency',
            'phpDoc' => NULL,
@@ -1105,7 +1098,7 @@ return [
           array (
           ),
         )),
-        7 => 
+        8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'editAgencyForm',
            'phpDoc' => NULL,
@@ -1136,7 +1129,7 @@ return [
           array (
           ),
         )),
-        8 => 
+        9 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'updateAgency',
            'phpDoc' => NULL,
@@ -1167,7 +1160,7 @@ return [
           array (
           ),
         )),
-        9 => 
+        10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'deleteAgency',
            'phpDoc' => NULL,
@@ -1198,7 +1191,7 @@ return [
           array (
           ),
         )),
-        10 => 
+        11 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'trips',
            'phpDoc' => NULL,
@@ -1216,7 +1209,7 @@ return [
           array (
           ),
         )),
-        11 => 
+        12 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createTripForm',
            'phpDoc' => NULL,
@@ -1234,7 +1227,7 @@ return [
           array (
           ),
         )),
-        12 => 
+        13 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'createTrip',
            'phpDoc' => NULL,
@@ -1252,7 +1245,7 @@ return [
           array (
           ),
         )),
-        13 => 
+        14 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'editTripForm',
            'phpDoc' => NULL,
@@ -1283,7 +1276,7 @@ return [
           array (
           ),
         )),
-        14 => 
+        15 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'updateTrip',
            'phpDoc' => NULL,
@@ -1314,7 +1307,7 @@ return [
           array (
           ),
         )),
-        15 => 
+        16 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'deleteTrip',
            'phpDoc' => NULL,
@@ -1340,6 +1333,60 @@ return [
                'phpDoc' => NULL,
                'flags' => 0,
             )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        17 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'exportTripsCSV',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        18 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'exportTripsExcel',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        19 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'exportTripsPDF',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
           ),
            'attributes' => 
           array (
@@ -2733,7 +2780,20 @@ return [
         0 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getAll',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Liste complète des trajets (admin + exports)
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -2751,7 +2811,20 @@ return [
         1 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getById',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Trajet par ID (admin)
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -2782,7 +2855,20 @@ return [
         2 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'create',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Création d’un trajet
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -2812,127 +2898,21 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getFilteredTripsPublic',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'array',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'filters',
-               'type' => 'array',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => true,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        4 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getFilteredPublicTrips',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'array',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'filters',
-               'type' => 'array',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-            1 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'limit',
-               'type' => 'int',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-            2 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'offset',
-               'type' => 'int',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        5 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'countFilteredPublicTrips',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'int',
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'filters',
-               'type' => 'array',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'update',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Mise à jour d’un trajet
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -2973,10 +2953,23 @@ return [
           array (
           ),
         )),
-        7 => 
+        4 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'delete',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Suppression d’un trajet
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -3004,10 +2997,23 @@ return [
           array (
           ),
         )),
-        8 => 
+        5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'countAll',
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Compteur total
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'byRef' => false,
            'public' => true,
            'private' => false,
@@ -3022,31 +3028,13 @@ return [
           array (
           ),
         )),
-        9 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'getAllTripsPublic',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => 'array',
-           'parameters' => 
-          array (
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        10 => 
+        6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getAllForExport',
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Export Excel — conforme au brief
+     * Liste complète des trajets pour les exports (Excel / PDF)
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -3066,6 +3054,81 @@ return [
            'returnType' => 'array',
            'parameters' => 
           array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getAllTripsPublic',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Liste publique des trajets (page d\'accueil)
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getFilteredTripsPublic',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Liste publique filtrée des trajets
+     */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'filters',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
           ),
            'attributes' => 
           array (
@@ -3291,6 +3354,50 @@ return [
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'role',
                'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'delete',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Suppression d\'un utilisateur (admin)
+    */',
+             'namespace' => 'App\\Models',
+             'uses' => 
+            array (
+              'pdo' => 'PDO',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'id',
+               'type' => 'int',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,

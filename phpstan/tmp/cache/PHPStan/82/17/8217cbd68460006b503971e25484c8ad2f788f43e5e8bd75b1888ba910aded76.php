@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
     array (
-      0 => '61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
+      0 => '6c8b88d305b45fa5cb3e09d1a01baa9d3f37d2a76804422001c8df274cb8197b',
       1 => 
       array (
         0 => 'app\\controllers\\admincontroller',
@@ -20,17 +20,21 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         3 => 'app\\controllers\\users',
         4 => 'app\\controllers\\showuser',
         5 => 'app\\controllers\\updateuserrole',
-        6 => 'app\\controllers\\agencies',
-        7 => 'app\\controllers\\createagency',
-        8 => 'app\\controllers\\editagencyform',
-        9 => 'app\\controllers\\updateagency',
-        10 => 'app\\controllers\\deleteagency',
-        11 => 'app\\controllers\\trips',
-        12 => 'app\\controllers\\createtripform',
-        13 => 'app\\controllers\\createtrip',
-        14 => 'app\\controllers\\edittripform',
-        15 => 'app\\controllers\\updatetrip',
-        16 => 'app\\controllers\\deletetrip',
+        6 => 'app\\controllers\\deleteuser',
+        7 => 'app\\controllers\\agencies',
+        8 => 'app\\controllers\\createagency',
+        9 => 'app\\controllers\\editagencyform',
+        10 => 'app\\controllers\\updateagency',
+        11 => 'app\\controllers\\deleteagency',
+        12 => 'app\\controllers\\trips',
+        13 => 'app\\controllers\\createtripform',
+        14 => 'app\\controllers\\createtrip',
+        15 => 'app\\controllers\\edittripform',
+        16 => 'app\\controllers\\updatetrip',
+        17 => 'app\\controllers\\deletetrip',
+        18 => 'app\\controllers\\exporttripscsv',
+        19 => 'app\\controllers\\exporttripsexcel',
+        20 => 'app\\controllers\\exporttripspdf',
       ),
       3 => 
       array (

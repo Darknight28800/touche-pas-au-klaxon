@@ -317,7 +317,7 @@ class AdminController extends CoreController
 
         $output = fopen('php://output', 'w');
 
-        fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF));
+        fprintf($output, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
         fputcsv($output, [
             'ID',
@@ -327,7 +327,7 @@ class AdminController extends CoreController
             'Arrivée',
             'Places dispo',
             'Places totales',
-            'Conducteur'
+            'Conducteur',
         ]);
 
         foreach ($trips as $t) {

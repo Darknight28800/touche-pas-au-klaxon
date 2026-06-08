@@ -10,8 +10,8 @@
 
         <h2 class="fw-bold mb-4">Détails du trajet</h2>
 
-        <p><strong>Départ :</strong> <?= htmlspecialchars($trip['departure_agency']) ?></p>
-        <p><strong>Arrivée :</strong> <?= htmlspecialchars($trip['arrival_agency']) ?></p>
+        <p><strong>Départ :</strong> <?= htmlspecialchars($trip['departure_agency_name']) ?></p>
+        <p><strong>Arrivée :</strong> <?= htmlspecialchars($trip['arrival_agency_name']) ?></p>
         <p><strong>Date départ :</strong> <?= date('d/m/Y H:i', strtotime($trip['departure_datetime'])) ?></p>
         <p><strong>Date arrivée :</strong> <?= date('d/m/Y H:i', strtotime($trip['arrival_datetime'])) ?></p>
         <p><strong>Places :</strong> <?= $trip['seats_available'] ?>/<?= $trip['seats_total'] ?></p>

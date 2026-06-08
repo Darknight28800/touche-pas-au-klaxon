@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Models\TripModel.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\TripModel
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-f4e082ada02d50e33b1b55b0f0c9ca31a9cac91bb02605c97b4db0ca9d667ea9',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 7,
-    'endLine' => 275,
+    'endLine' => 211,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Models\\Database',
@@ -64,9 +64,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 9,
-        'endLine' => 22,
+        'docComment' => '/**
+ * Liste complète des trajets (admin + exports)
+ */',
+        'startLine' => 12,
+        'endLine' => 29,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -104,8 +106,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 24,
-            'endLine' => 24,
+            'startLine' => 34,
+            'endLine' => 34,
             'startColumn' => 29,
             'endColumn' => 35,
             'parameterIndex' => 0,
@@ -144,9 +146,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 24,
-        'endLine' => 41,
+        'docComment' => '/**
+ * Trajet par ID (admin)
+ */',
+        'startLine' => 34,
+        'endLine' => 55,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -184,8 +188,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 43,
-            'endLine' => 43,
+            'startLine' => 60,
+            'endLine' => 60,
             'startColumn' => 28,
             'endColumn' => 38,
             'parameterIndex' => 0,
@@ -205,256 +209,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 43,
-        'endLine' => 65,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\TripModel',
-        'implementingClassName' => 'App\\Models\\TripModel',
-        'currentClassName' => 'App\\Models\\TripModel',
-        'aliasName' => NULL,
-      ),
-      'getFilteredTripsPublic' => 
-      array (
-        'name' => 'getFilteredTripsPublic',
-        'parameters' => 
-        array (
-          'filters' => 
-          array (
-            'name' => 'filters',
-            'default' => 
-            array (
-              'code' => '[]',
-              'attributes' => 
-              array (
-                'startLine' => 67,
-                'endLine' => 67,
-                'startTokenPos' => 278,
-                'startFilePos' => 2172,
-                'endTokenPos' => 279,
-                'endFilePos' => 2173,
-              ),
-            ),
-            'type' => 
-            array (
-              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-              'data' => 
-              array (
-                'name' => 'array',
-                'isIdentifier' => true,
-              ),
-            ),
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 67,
-            'endLine' => 67,
-            'startColumn' => 44,
-            'endColumn' => 62,
-            'parameterIndex' => 0,
-            'isOptional' => true,
-          ),
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'array',
-            'isIdentifier' => true,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 67,
-        'endLine' => 104,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\TripModel',
-        'implementingClassName' => 'App\\Models\\TripModel',
-        'currentClassName' => 'App\\Models\\TripModel',
-        'aliasName' => NULL,
-      ),
-      'getFilteredPublicTrips' => 
-      array (
-        'name' => 'getFilteredPublicTrips',
-        'parameters' => 
-        array (
-          'filters' => 
-          array (
-            'name' => 'filters',
-            'default' => NULL,
-            'type' => 
-            array (
-              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-              'data' => 
-              array (
-                'name' => 'array',
-                'isIdentifier' => true,
-              ),
-            ),
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 106,
-            'endLine' => 106,
-            'startColumn' => 44,
-            'endColumn' => 57,
-            'parameterIndex' => 0,
-            'isOptional' => false,
-          ),
-          'limit' => 
-          array (
-            'name' => 'limit',
-            'default' => NULL,
-            'type' => 
-            array (
-              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-              'data' => 
-              array (
-                'name' => 'int',
-                'isIdentifier' => true,
-              ),
-            ),
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 106,
-            'endLine' => 106,
-            'startColumn' => 60,
-            'endColumn' => 69,
-            'parameterIndex' => 1,
-            'isOptional' => false,
-          ),
-          'offset' => 
-          array (
-            'name' => 'offset',
-            'default' => NULL,
-            'type' => 
-            array (
-              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-              'data' => 
-              array (
-                'name' => 'int',
-                'isIdentifier' => true,
-              ),
-            ),
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 106,
-            'endLine' => 106,
-            'startColumn' => 72,
-            'endColumn' => 82,
-            'parameterIndex' => 2,
-            'isOptional' => false,
-          ),
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'array',
-            'isIdentifier' => true,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 106,
-        'endLine' => 151,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\TripModel',
-        'implementingClassName' => 'App\\Models\\TripModel',
-        'currentClassName' => 'App\\Models\\TripModel',
-        'aliasName' => NULL,
-      ),
-      'countFilteredPublicTrips' => 
-      array (
-        'name' => 'countFilteredPublicTrips',
-        'parameters' => 
-        array (
-          'filters' => 
-          array (
-            'name' => 'filters',
-            'default' => NULL,
-            'type' => 
-            array (
-              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-              'data' => 
-              array (
-                'name' => 'array',
-                'isIdentifier' => true,
-              ),
-            ),
-            'isVariadic' => false,
-            'byRef' => false,
-            'isPromoted' => false,
-            'attributes' => 
-            array (
-            ),
-            'startLine' => 153,
-            'endLine' => 153,
-            'startColumn' => 46,
-            'endColumn' => 59,
-            'parameterIndex' => 0,
-            'isOptional' => false,
-          ),
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'int',
-            'isIdentifier' => true,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 153,
-        'endLine' => 188,
+        'docComment' => '/**
+ * Création d’un trajet
+ */',
+        'startLine' => 60,
+        'endLine' => 82,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -492,8 +251,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 190,
-            'endLine' => 190,
+            'startLine' => 87,
+            'endLine' => 87,
             'startColumn' => 28,
             'endColumn' => 34,
             'parameterIndex' => 0,
@@ -518,8 +277,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 190,
-            'endLine' => 190,
+            'startLine' => 87,
+            'endLine' => 87,
             'startColumn' => 37,
             'endColumn' => 47,
             'parameterIndex' => 1,
@@ -539,9 +298,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 190,
-        'endLine' => 214,
+        'docComment' => '/**
+ * Mise à jour d’un trajet
+ */',
+        'startLine' => 87,
+        'endLine' => 111,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -579,8 +340,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 216,
-            'endLine' => 216,
+            'startLine' => 116,
+            'endLine' => 116,
             'startColumn' => 28,
             'endColumn' => 34,
             'parameterIndex' => 0,
@@ -600,9 +361,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 216,
-        'endLine' => 222,
+        'docComment' => '/**
+ * Suppression d’un trajet
+ */',
+        'startLine' => 116,
+        'endLine' => 120,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -635,44 +398,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => NULL,
-        'startLine' => 224,
-        'endLine' => 227,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\TripModel',
-        'implementingClassName' => 'App\\Models\\TripModel',
-        'currentClassName' => 'App\\Models\\TripModel',
-        'aliasName' => NULL,
-      ),
-      'getAllTripsPublic' => 
-      array (
-        'name' => 'getAllTripsPublic',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'array',
-            'isIdentifier' => true,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 229,
-        'endLine' => 250,
+        'docComment' => '/**
+ * Compteur total
+ */',
+        'startLine' => 125,
+        'endLine' => 128,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -706,10 +436,110 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => '/**
- * Export Excel — conforme au brief
+ * Liste complète des trajets pour les exports (Excel / PDF)
  */',
-        'startLine' => 255,
-        'endLine' => 274,
+        'startLine' => 133,
+        'endLine' => 152,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\TripModel',
+        'implementingClassName' => 'App\\Models\\TripModel',
+        'currentClassName' => 'App\\Models\\TripModel',
+        'aliasName' => NULL,
+      ),
+      'getAllTripsPublic' => 
+      array (
+        'name' => 'getAllTripsPublic',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'array',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Liste publique des trajets (page d\'accueil)
+ */',
+        'startLine' => 157,
+        'endLine' => 173,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\TripModel',
+        'implementingClassName' => 'App\\Models\\TripModel',
+        'currentClassName' => 'App\\Models\\TripModel',
+        'aliasName' => NULL,
+      ),
+      'getFilteredTripsPublic' => 
+      array (
+        'name' => 'getFilteredTripsPublic',
+        'parameters' => 
+        array (
+          'filters' => 
+          array (
+            'name' => 'filters',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'array',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 178,
+            'endLine' => 178,
+            'startColumn' => 44,
+            'endColumn' => 57,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'array',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Liste publique filtrée des trajets
+ */',
+        'startLine' => 178,
+        'endLine' => 210,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

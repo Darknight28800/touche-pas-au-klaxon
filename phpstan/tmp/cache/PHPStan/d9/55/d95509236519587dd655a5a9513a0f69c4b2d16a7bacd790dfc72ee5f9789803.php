@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Controllers\\AdminController.php' => 
     array (
-      0 => '61c7339b3eb3a657ccf3c4c38893bf991a0736a5cb32f1703411efc47f10b097',
+      0 => '6c8b88d305b45fa5cb3e09d1a01baa9d3f37d2a76804422001c8df274cb8197b',
       1 => 
       array (
         0 => 'app\\controllers\\admincontroller',
@@ -20,17 +20,21 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         3 => 'app\\controllers\\users',
         4 => 'app\\controllers\\showuser',
         5 => 'app\\controllers\\updateuserrole',
-        6 => 'app\\controllers\\agencies',
-        7 => 'app\\controllers\\createagency',
-        8 => 'app\\controllers\\editagencyform',
-        9 => 'app\\controllers\\updateagency',
-        10 => 'app\\controllers\\deleteagency',
-        11 => 'app\\controllers\\trips',
-        12 => 'app\\controllers\\createtripform',
-        13 => 'app\\controllers\\createtrip',
-        14 => 'app\\controllers\\edittripform',
-        15 => 'app\\controllers\\updatetrip',
-        16 => 'app\\controllers\\deletetrip',
+        6 => 'app\\controllers\\deleteuser',
+        7 => 'app\\controllers\\agencies',
+        8 => 'app\\controllers\\createagency',
+        9 => 'app\\controllers\\editagencyform',
+        10 => 'app\\controllers\\updateagency',
+        11 => 'app\\controllers\\deleteagency',
+        12 => 'app\\controllers\\trips',
+        13 => 'app\\controllers\\createtripform',
+        14 => 'app\\controllers\\createtrip',
+        15 => 'app\\controllers\\edittripform',
+        16 => 'app\\controllers\\updatetrip',
+        17 => 'app\\controllers\\deletetrip',
+        18 => 'app\\controllers\\exporttripscsv',
+        19 => 'app\\controllers\\exporttripsexcel',
+        20 => 'app\\controllers\\exporttripspdf',
       ),
       3 => 
       array (
@@ -148,7 +152,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
     array (
-      0 => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
+      0 => 'f4e082ada02d50e33b1b55b0f0c9ca31a9cac91bb02605c97b4db0ca9d667ea9',
       1 => 
       array (
         0 => 'app\\models\\tripmodel',
@@ -158,14 +162,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\models\\getall',
         1 => 'app\\models\\getbyid',
         2 => 'app\\models\\create',
-        3 => 'app\\models\\getfilteredtripspublic',
-        4 => 'app\\models\\getfilteredpublictrips',
-        5 => 'app\\models\\countfilteredpublictrips',
-        6 => 'app\\models\\update',
-        7 => 'app\\models\\delete',
-        8 => 'app\\models\\countall',
-        9 => 'app\\models\\getalltripspublic',
-        10 => 'app\\models\\getallforexport',
+        3 => 'app\\models\\update',
+        4 => 'app\\models\\delete',
+        5 => 'app\\models\\countall',
+        6 => 'app\\models\\getallforexport',
+        7 => 'app\\models\\getalltripspublic',
+        8 => 'app\\models\\getfilteredtripspublic',
       ),
       3 => 
       array (
@@ -173,7 +175,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\UserModel.php' => 
     array (
-      0 => '687e591d73cd51c2f13c3d8e04cef9299861810de7a129ce61c2aecc07c5aa99',
+      0 => '0eec4643d2ab33f9c0a7cd53d3c9fd4cb56973383a9d21cb5e668c9574a3c78e',
       1 => 
       array (
         0 => 'app\\models\\usermodel',
@@ -185,6 +187,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'app\\models\\getall',
         3 => 'app\\models\\countall',
         4 => 'app\\models\\updaterole',
+        5 => 'app\\models\\delete',
       ),
       3 => 
       array (
@@ -232,7 +235,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\agencies.php' => 
     array (
-      0 => 'd072f3345b9d9d304ef42becc3a1a476065b3081bfca9f5fd9ab1faa529f600f',
+      0 => '790e8189b4a70732ae868cb066d4d8be19fbf73daeaae5fe7f454cc60d06bcd9',
       1 => 
       array (
       ),
@@ -245,7 +248,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\dashboard.php' => 
     array (
-      0 => '5c5ba2a01b9bcca2e4a081a8c623717c0886ce73736fc211b54db70e9268b590',
+      0 => '83712c15d3a887e0c30a5c010baa191d386faf47ce12972e62d0862350c7443b',
       1 => 
       array (
       ),
@@ -271,7 +274,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\trips.php' => 
     array (
-      0 => '9a694cd88b33baa3c5bef460982884287d051487b5ec5790183fc6121573f44c',
+      0 => '470320275c669864d2d21fb8ac9709298080f66f43a509b4ea90a6c61e4e6e7f',
       1 => 
       array (
       ),
@@ -310,7 +313,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\users.php' => 
     array (
-      0 => '16714d05878a6cf48435a6ff69c17b87903101ae5dd214f626c76f8d03c0b910',
+      0 => 'ffe9c19b60e15c9a711fe18d00376c0904812bf42a93318476e0e4839fd7c920',
       1 => 
       array (
       ),
@@ -336,7 +339,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\home.php' => 
     array (
-      0 => 'fbe5d10fb8169fc534e004cfb05cc8725dfa9c5196431dd5a918a5a079f2e841',
+      0 => 'eaa6b3f46f7ac136ffe09f8507341ba7f1a16dda76cab73f99ff243c56b982ea',
       1 => 
       array (
       ),
@@ -495,32 +498,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\partials\\footer_admin.php' => 
-    array (
-      0 => '464bf417a44b90a9d03ab1765fcf68e2e451f9b6a66d3df0a802c200f1b0d53b',
-      1 => 
-      array (
-      ),
-      2 => 
-      array (
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\partials\\header_admin.php' => 
-    array (
-      0 => '7b04a79482110d43cec2e457a56f4f5559e84d5e0028cf97b6784ce2277e5de1',
-      1 => 
-      array (
-      ),
-      2 => 
-      array (
-      ),
-      3 => 
-      array (
-      ),
-    ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\trips_show.php' => 
     array (
       0 => 'e5adef6b51093b90ab5f65f2e2bdd6b94b9f12154d9f5cb3d3eb9507895d30d4',
@@ -536,7 +513,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\admin\\users_show.php' => 
     array (
-      0 => 'cd0014670cfd61fcaf4ce13a4ef070df7d95218491957c401b07ea17f84bb2f5',
+      0 => '202231212754bb633b379362eeaff0ac2318eef083184b1a104d34e7c7907424',
       1 => 
       array (
       ),
@@ -589,6 +566,32 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\trips\\list.php' => 
     array (
       0 => '7330665a683428934b77ca0881bba7628b0f2bfaedd056c080b4d486bc2095c9',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\_partials\\footer_admin.php' => 
+    array (
+      0 => '464bf417a44b90a9d03ab1765fcf68e2e451f9b6a66d3df0a802c200f1b0d53b',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Views\\_partials\\header_admin.php' => 
+    array (
+      0 => 'fd57c47d24a8dfb3167a16081abbb482cb18f08796151dcc7137cb3a1625d705',
       1 => 
       array (
       ),

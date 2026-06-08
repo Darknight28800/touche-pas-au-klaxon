@@ -17,7 +17,9 @@ class TripModel extends Database
                 a1.name AS departure_agency_name,
                 a2.name AS arrival_agency_name,
                 u.firstname AS driver_firstname,
-                u.lastname AS driver_lastname
+                u.lastname AS driver_lastname,
+                u.email AS driver_email,
+                u.phone AS driver_phone
             FROM trips t
             JOIN agencies a1 ON a1.id = t.departure_agency_id
             JOIN agencies a2 ON a2.id = t.arrival_agency_id
@@ -29,7 +31,7 @@ class TripModel extends Database
     }
 
     /**
-     * Trajet par ID (admin)
+     * Trajet par ID (admin + public)
      */
     public function getById(int $id): ?array
     {
@@ -39,7 +41,9 @@ class TripModel extends Database
                 a1.name AS departure_agency_name,
                 a2.name AS arrival_agency_name,
                 u.firstname AS driver_firstname,
-                u.lastname AS driver_lastname
+                u.lastname AS driver_lastname,
+                u.email AS driver_email,
+                u.phone AS driver_phone
             FROM trips t
             JOIN agencies a1 ON a1.id = t.departure_agency_id
             JOIN agencies a2 ON a2.id = t.arrival_agency_id
@@ -111,7 +115,7 @@ class TripModel extends Database
     }
 
     /**
-     * Suppression
+     * Suppression d’un trajet
      */
     public function delete(int $id): bool
     {
@@ -120,10 +124,106 @@ class TripModel extends Database
     }
 
     /**
-     * Compteur
+     * Compteur total
      */
     public function countAll(): int
     {
         return (int) $this->db->query("SELECT COUNT(*) FROM trips")->fetchColumn();
+    }
+
+    /**
+     * Liste complète des trajets pour les exports (Excel / PDF)
+     */
+    public function getAllForExport(): array
+    {
+        $sql = "
+            SELECT 
+                t.*,
+                a1.name AS departure_agency_name,
+                a2.name AS arrival_agency_name,
+                u.firstname AS driver_firstname,
+                u.lastname AS driver_lastname,
+                u.email AS driver_email,
+                u.phone AS driver_phone
+            FROM trips t
+            JOIN agencies a1 ON a1.id = t.departure_agency_id
+            JOIN agencies a2 ON a2.id = t.arrival_agency_id
+            LEFT JOIN users u ON u.id = t.driver_id
+            ORDER BY t.departure_datetime ASC
+        ";
+
+        return $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Liste publique des trajets (page d'accueil)
+     */
+    public function getAllTripsPublic(): array
+    {
+        $sql = "
+            SELECT 
+                t.*,
+                a1.name AS departure_agency_name,
+                a2.name AS arrival_agency_name,
+                u.firstname AS driver_firstname,
+                u.lastname AS driver_lastname,
+                u.email AS driver_email,
+                u.phone AS driver_phone
+            FROM trips t
+            JOIN agencies a1 ON a1.id = t.departure_agency_id
+            JOIN agencies a2 ON a2.id = t.arrival_agency_id
+            LEFT JOIN users u ON u.id = t.driver_id
+            WHERE t.seats_available > 0
+            ORDER BY t.departure_datetime ASC
+        ";
+
+        return $this->db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Liste publique filtrée des trajets
+     */
+    public function getFilteredTripsPublic(array $filters): array
+    {
+        $sql = "
+            SELECT 
+                t.*,
+                a1.name AS departure_agency_name,
+                a2.name AS arrival_agency_name,
+                u.firstname AS driver_firstname,
+                u.lastname AS driver_lastname,
+                u.email AS driver_email,
+                u.phone AS driver_phone
+            FROM trips t
+            JOIN agencies a1 ON a1.id = t.departure_agency_id
+            JOIN agencies a2 ON a2.id = t.arrival_agency_id
+            LEFT JOIN users u ON u.id = t.driver_id
+            WHERE t.seats_available > 0
+              AND t.departure_datetime > NOW()
+        ";
+
+        $params = [];
+
+        if (!empty($filters['departure'])) {
+            $sql .= " AND t.departure_agency_id = :dep";
+            $params['dep'] = $filters['departure'];
+        }
+
+        if (!empty($filters['arrival'])) {
+            $sql .= " AND t.arrival_agency_id = :arr";
+            $params['arr'] = $filters['arrival'];
+        }
+
+        if (!empty($filters['date'])) {
+            $sql .= " AND DATE(t.departure_datetime) = :date";
+            $params['date'] = $filters['date'];
+        }
+
+        $sql .= " ORDER BY t.departure_datetime ASC";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute($params);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

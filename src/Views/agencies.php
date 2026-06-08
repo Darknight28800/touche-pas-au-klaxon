@@ -7,9 +7,9 @@
     <div class="saas-card p-4">
         <h2 class="fw-semibold mb-3">Liste des agences</h2>
 
-        <div class="table-responsive">
-            <table class="table table-dark table-striped align-middle">
-                <thead>
+        <div class="public-table table-responsive">
+            <table class="table table-striped align-middle">
+                <thead class="table-light">
                     <tr>
                         <th>ID</th>
                         <th>Nom</th>
@@ -32,11 +32,9 @@
                         </tr>
                     <?php endif; ?>
                 </tbody>
-
             </table>
         </div>
     </div>
-
 </div>
 
 <?php require __DIR__ . '/_partials/footer.php'; ?>

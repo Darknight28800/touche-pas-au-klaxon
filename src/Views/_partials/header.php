@@ -10,7 +10,13 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Touche Pas Au Klaxon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Ton style -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Icônes Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
@@ -41,7 +47,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     </ul>
                 <?php endif; ?>
 
-                <!-- MENU ADMIN HORIZONTAL -->
+                <!-- MENU ADMIN -->
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'admin'): ?>
                     <ul class="navbar-nav ms-auto gap-4">
                         <li class="nav-item"><a class="nav-link fw-semibold" href="/admin/users">Utilisateurs</a></li>
@@ -51,7 +57,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     </ul>
                 <?php else: ?>
 
-                    <!-- BOUTON MODE SOMBRE + MENU UTILISATEUR -->
+                    <!-- MODE SOMBRE + UTILISATEUR -->
                     <div class="d-flex align-items-center gap-3">
 
                         <button id="themeToggle" class="btn btn-light rounded-circle p-2">
@@ -85,7 +91,7 @@ if (session_status() === PHP_SESSION_NONE) {
     </nav>
 </header>
 
-< class="py-4">
+<main class="py-4">
     <div class="container">
         <?php if (!empty($_SESSION['success'])): ?>
             <div class="alert alert-success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>

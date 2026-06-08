@@ -255,10 +255,55 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      '54920c86e94b92c6cdcb7b387181e4b3' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Models',
+         'uses' => 
+        array (
+          'pdo' => 'PDO',
+        ),
+         'className' => 'App\\Models\\UserModel',
+         'functionName' => 'delete',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Models',
+           'uses' => 
+          array (
+            'pdo' => 'PDO',
+          ),
+           'className' => 'App\\Models\\UserModel',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
     ),
     1 => 
     array (
-      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\UserModel.php' => '687e591d73cd51c2f13c3d8e04cef9299861810de7a129ce61c2aecc07c5aa99',
+      'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\UserModel.php' => '0eec4643d2ab33f9c0a7cd53d3c9fd4cb56973383a9d21cb5e668c9574a3c78e',
     ),
   ),
 ));

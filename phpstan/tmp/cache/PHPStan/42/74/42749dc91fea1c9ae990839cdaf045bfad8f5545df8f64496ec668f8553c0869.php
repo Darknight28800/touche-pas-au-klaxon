@@ -2,7 +2,7 @@
 
 // odsl-C:\xampp\htdocs\touche-pas-au-klaxon\src\Models\UserModel.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\UserModel
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-687e591d73cd51c2f13c3d8e04cef9299861810de7a129ce61c2aecc07c5aa99',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-0eec4643d2ab33f9c0a7cd53d3c9fd4cb56973383a9d21cb5e668c9574a3c78e',
    'data' => 
   array (
     'locatedSource' => 
@@ -30,7 +30,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 11,
-    'endLine' => 68,
+    'endLine' => 78,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Models\\Database',
@@ -360,6 +360,69 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  */',
         'startLine' => 58,
         'endLine' => 67,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\UserModel',
+        'implementingClassName' => 'App\\Models\\UserModel',
+        'currentClassName' => 'App\\Models\\UserModel',
+        'aliasName' => NULL,
+      ),
+      'delete' => 
+      array (
+        'name' => 'delete',
+        'parameters' => 
+        array (
+          'id' => 
+          array (
+            'name' => 'id',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 72,
+            'endLine' => 72,
+            'startColumn' => 28,
+            'endColumn' => 34,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'bool',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Suppression d\'un utilisateur (admin)
+ */',
+        'startLine' => 72,
+        'endLine' => 76,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

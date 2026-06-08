@@ -22,9 +22,9 @@
 
                         <div>
                             <h5 class="fw-bold mb-2">
-                                <?= htmlspecialchars($t['departure_agency']) ?>
+                                <?= htmlspecialchars($t['departure_agency_name']) ?>
                                 →
-                                <?= htmlspecialchars($t['arrival_agency']) ?>
+                                <?= htmlspecialchars($t['arrival_agency_name']) ?>
                             </h5>
 
                             <p class="mb-1">
@@ -49,80 +49,12 @@
                             </p>
                         </div>
 
-                        <?php if (isset($_SESSION['user'])): ?>
-                            <!-- Bouton Infos -->
-                            <button 
-                                class="btn btn-outline-primary w-100 mb-2" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#tripModal<?= $t['id'] ?>">
-                                Infos
-                            </button>
-
-                            <!-- Boutons Modifier / Supprimer si conducteur -->
-                            <?php if ($_SESSION['user']['id'] == $t['driver_id']): ?>
-
-                                <a href="/trip/edit/<?= $t['id'] ?>" 
-                                   class="btn btn-warning w-100 mb-2">
-                                    Modifier
-                                </a>
-
-                                <a href="/trip/delete/<?= $t['id'] ?>" 
-                                   class="btn btn-danger w-100"
-                                   onclick="return confirm('Voulez-vous vraiment supprimer ce trajet ?');">
-                                    Supprimer
-                                </a>
-
-                            <?php endif; ?>
-                        <?php endif; ?>
-
                         <a href="/trip/<?= $t['id'] ?>" class="btn btn-primary w-100 mt-3">
                             Voir le trajet
                         </a>
 
                     </div>
                 </div>
-
-                <!-- MODALE INFOS TRAJET -->
-                <?php if (isset($_SESSION['user'])): ?>
-                <div class="modal fade" id="tripModal<?= $t['id'] ?>" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h5 class="modal-title">Informations du trajet</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-
-                            <div class="modal-body">
-
-                                <p><strong>Conducteur :</strong> 
-                                    <?= htmlspecialchars($t['driver_firstname']) ?>
-                                    <?= htmlspecialchars($t['driver_lastname']) ?>
-                                </p>
-
-                                <p><strong>Email :</strong> 
-                                    <?= htmlspecialchars($t['driver_email'] ?? 'Non renseigné') ?>
-                                </p>
-
-                                <p><strong>Téléphone :</strong> 
-                                    <?= htmlspecialchars($t['driver_phone'] ?? 'Non renseigné') ?>
-                                </p>
-
-                                <p><strong>Places totales :</strong> 
-                                    <?= $t['seats_total'] ?>
-                                </p>
-
-                            </div>
-
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <?php endif; ?>
-
             <?php endforeach; ?>
         </div>
 

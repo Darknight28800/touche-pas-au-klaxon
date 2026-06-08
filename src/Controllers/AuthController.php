@@ -60,6 +60,7 @@ class AuthController extends CoreController
         $userModel = new UserModel();
         $user      = $userModel->getByEmail($email);
 
+
         if (!$user || !password_verify($password, $user['password'])) {
             $_SESSION['error'] = "Identifiants incorrects.";
             header('Location: ' . $this->router->generate('login'));

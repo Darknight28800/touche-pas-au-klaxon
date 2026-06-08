@@ -25,7 +25,8 @@
             <div class="alert alert-info shadow-sm">Aucun utilisateur enregistré.</div>
         <?php else: ?>
 
-            <div class="table-responsive">
+            <!-- AJOUT ICI : admin-table -->
+            <div class="admin-table table-responsive">
                 <table class="table align-middle mb-0">
                     <thead class="table-light">
                         <tr>
@@ -62,13 +63,11 @@
 
                                 <td class="text-end">
 
-                                    <!-- Bouton détails -->
                                     <a href="/admin/users/<?= $u['id'] ?>" 
                                        class="btn btn-outline-secondary btn-sm me-1">
                                         <i class="bi bi-eye"></i>
                                     </a>
 
-                                    <!-- Bouton supprimer (interdit pour admin) -->
                                     <?php if ($u['role'] !== 'admin'): ?>
                                         <a href="/admin/user/delete/<?= $u['id'] ?>"
                                            class="btn btn-outline-danger btn-sm"

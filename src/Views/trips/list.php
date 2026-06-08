@@ -57,9 +57,9 @@
 
                     <div>
                         <h5 class="fw-bold mb-2">
-                            <?= htmlspecialchars($t['departure_agency']) ?>
+                            <?= htmlspecialchars($t['departure_agency_name']) ?>
                             →
-                            <?= htmlspecialchars($t['arrival_agency']) ?>
+                            <?= htmlspecialchars($t['arrival_agency_name']) ?>
                         </h5>
 
                         <p class="mb-1"><strong>Départ :</strong> <?= date('d/m/Y H:i', strtotime($t['departure_datetime'])) ?></p>

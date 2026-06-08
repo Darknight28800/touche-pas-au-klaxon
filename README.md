@@ -97,7 +97,6 @@ Le projet est construit en **PHP MVC**, avec un **frontend moderne**, un **desig
       footer.php
       header_admin.php
       footer_admin.php
-      navbar_admin.php
     /admin
       dashboard.php
       trips.php
@@ -144,13 +143,19 @@ composer install
 
 ## 3️⃣ Configurer l’environnement
 
-Créer un fichier `.env` :
+La configuration de la base de données est gérée via le fichier :
 
-```
-DB_HOST=localhost
-DB_NAME=tpak
-DB_USER=root
-DB_PASSWORD=
+      /config/config.php
+
+
+Ce fichier contient les constantes nécessaires à la connexion MySQL :
+
+php
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'tpak');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
 ```
 

@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\TripModel.php' => 
     array (
-      0 => '93596e2371f02ee0e5dc32c9a1d88dbc6d80339e3b30ac7b4083196a727853ba',
+      0 => 'f4e082ada02d50e33b1b55b0f0c9ca31a9cac91bb02605c97b4db0ca9d667ea9',
       1 => 
       array (
         0 => 'app\\models\\tripmodel',
@@ -37,14 +37,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\models\\getall',
         1 => 'app\\models\\getbyid',
         2 => 'app\\models\\create',
-        3 => 'app\\models\\getfilteredtripspublic',
-        4 => 'app\\models\\getfilteredpublictrips',
-        5 => 'app\\models\\countfilteredpublictrips',
-        6 => 'app\\models\\update',
-        7 => 'app\\models\\delete',
-        8 => 'app\\models\\countall',
-        9 => 'app\\models\\getalltripspublic',
-        10 => 'app\\models\\getallforexport',
+        3 => 'app\\models\\update',
+        4 => 'app\\models\\delete',
+        5 => 'app\\models\\countall',
+        6 => 'app\\models\\getallforexport',
+        7 => 'app\\models\\getalltripspublic',
+        8 => 'app\\models\\getfilteredtripspublic',
       ),
       3 => 
       array (
@@ -52,7 +50,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\xampp\\htdocs\\touche-pas-au-klaxon\\src\\Models\\UserModel.php' => 
     array (
-      0 => '687e591d73cd51c2f13c3d8e04cef9299861810de7a129ce61c2aecc07c5aa99',
+      0 => '0eec4643d2ab33f9c0a7cd53d3c9fd4cb56973383a9d21cb5e668c9574a3c78e',
       1 => 
       array (
         0 => 'app\\models\\usermodel',
@@ -64,6 +62,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'app\\models\\getall',
         3 => 'app\\models\\countall',
         4 => 'app\\models\\updaterole',
+        5 => 'app\\models\\delete',
       ),
       3 => 
       array (

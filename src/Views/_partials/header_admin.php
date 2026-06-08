@@ -4,7 +4,7 @@ $router = $GLOBALS['router'];
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="<?= $_SESSION['theme'] ?? 'light' ?>">
 <head>
     <meta charset="UTF-8">
     <title>Admin — Touche Pas Au Klaxon</title>
@@ -15,31 +15,30 @@ $router = $GLOBALS['router'];
     <!-- Icônes -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <!-- CSS Admin -->
+    <!-- Style global -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Style admin -->
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 
-<body class="bg-light">
+<body>
 
 <?php if ($user && $user['role'] === 'admin'): ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+<nav class="navbar navbar-expand-lg premium-nav shadow-sm">
     <div class="container">
 
-        <!-- Logo -->
         <a class="navbar-brand fw-bold" href="<?= $router->generate('admin-dashboard') ?>">
             Admin — TPAK
         </a>
 
-        <!-- Burger -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Menu -->
         <div class="collapse navbar-collapse" id="adminNav">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                 <li class="nav-item">
                     <a class="nav-link <?= $_SERVER['REQUEST_URI'] === '/admin' ? 'active' : '' ?>"
                        href="<?= $router->generate('admin-dashboard') ?>">
@@ -67,13 +66,17 @@ $router = $GLOBALS['router'];
                         <i class="bi bi-car-front me-1"></i> Trajets
                     </a>
                 </li>
-
             </ul>
 
-            <!-- Actions -->
-            <ul class="navbar-nav flex-row">
+            <ul class="navbar-nav flex-row align-items-center gap-3">
 
-                <li class="nav-item me-3">
+                <li class="nav-item">
+                    <button id="themeToggle" class="btn btn-light rounded-circle p-2">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="<?= $router->generate('home') ?>">
                         <i class="bi bi-arrow-left-circle me-1"></i> Retour au site
                     </a>
