@@ -128,54 +128,36 @@ composer.json
 
 ## 1️⃣ Cloner le projet
 
-```
-git clone <url-du-repo>
+git clone https://github.com/Darknight28800/touche-pas-au-klaxon.git
 cd touche-pas-au-klaxon
-
-```
 
 ## 2️⃣ Installer les dépendances PHP
 
-```
 composer install
 
-```
+## 3️⃣ Configurer la base de données
 
-## 3️⃣ Configurer l’environnement
+La configuration se trouve dans :
 
-La configuration de la base de données est gérée via le fichier :
+/src/Models/database.php
 
-      /config/config.php
+Renseigner :
 
+DB_HOST
+DB_NAME
+DB_USER
+DB_PASSWORD
 
-Ce fichier contient les constantes nécessaires à la connexion MySQL :
+## 4️⃣ Importer la base SQL
 
-php
+Importer le fichier :
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'tpak');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-
-```
-
-## 4️⃣ Importer la base de données
-
-Importer le fichier SQL fourni :
-
-```
-/database/tpak.sql
-
-```
+/database/create.sql
 
 ## 5️⃣ Lancer le serveur PHP
 
-```
 php -S localhost:8000 -t public
 
-```
-
----
 
 # 🗄 Base de données
 
